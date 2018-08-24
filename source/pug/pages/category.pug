@@ -1,0 +1,192 @@
+extends ../templates/base
+
+block variables
+	- var classBody = 'category-page';
+	- var classWrapper = 'category';
+	- var page = 'news';
+
+block title
+	title Страница товара
+
+block header
+	include ../modules/header
+	+header()
+
+block main
+	section.breadcrumb
+		.container
+			.breadcrumb__content
+				.category__title
+					h1 Категории
+				ul.clearfix
+					li
+						a(href='./') Главная
+					li
+						a(href='category.html') Категории
+					li Нижнее белье
+	.category
+		section.category__block
+			.container
+				.row
+					form.category__left.col-md-3
+						.category__search
+							h2 Поиск
+							.form-group
+								input.form-control(type="search", placeholder="Поиск товара...")
+								button(type="submit").fa.fa-search
+						mixin button(type, num, name)
+							li
+								div(class= type + "-block")
+									div(class= type)
+										label(for= type + num)
+											input(type= type, name= type, id= type + num)
+											div(class= type + "-square")
+											p #{name}
+						#accordion.panel-group.wholesale-catalog__accordion
+							mixin panel(className, num, title, value)
+								.panel
+									.panel-heading
+										h2
+											a(data-toggle='collapse', href='#collapse' + num, aria-expanded= value) #{title}
+									div(class="panel-collapse collapse" + className, id="collapse" + num)
+										.panel-body
+											block
+							+panel(' in', '1', 'Категории товара', 'true')
+								ul.category__filter-list
+									li
+										a(href="category.html")
+											p Нижнее белье
+											span (100)
+									li
+										a(href="category.html")
+											p Бюстгальтеры
+											span (973)
+									li
+										a(href="category.html")
+											p Комплекты
+											span (40)
+									li
+										a(href="category.html")
+											p Трусики
+											span (10)
+									li
+										a(href="category.html")
+											p Новинки
+											span (900)
+								.category__filter-price
+									h2 Фильтр по цене
+									#slider-range
+									.category__price-block
+										.category__price-min
+											p#price1
+											i грн
+										.category__price-max
+											p#price2
+											i грн
+									button.btn(type="submit") Применить
+							+panel(' in', '2', 'Размер', 'true')
+								ul.category__filter-list
+									+button('checkbox', '1', 'B (70, 75, 80)')
+									+button('checkbox', '2', 'D (70, 75, 80)')
+									+button('checkbox', '3', 'D (75, 80, 85)')
+									+button('checkbox', '4', 'С (70, 75, 80)')
+									+button('checkbox', '5', 'С (75, 80, 85)')
+									+button('checkbox', '6', '(M, L, XL)')
+									+button('checkbox', '7', '(S, M, L)')
+									+button('checkbox', '8', 'B (75, 75, 75)')
+									+button('checkbox', '9', 'B (75, 80, 85)')
+									+button('checkbox', '10', 'C (75, 75, 75)')
+									+button('checkbox', '11', 'D (80, 85, 90)')
+									+button('checkbox', '12', 'С (85, 90, 95)')
+									+button('checkbox', '13', 'С (80, 85, 90)')
+									+button('checkbox', '14', 'С (85, 85, 85)')
+					.category__right.col-md-9
+						.category__top
+							.category__top-left
+								ul.clearfix
+									li
+										a(href="category-2.html").category__first-screen
+											div
+												span
+												span
+												span
+									li
+										a(href="category.html").active.category__second-screen
+											div
+												span
+												span
+												span
+												span
+							.category__top-center
+								h2 Бюстгальтеры
+							.category__top-right
+								select.selectpicker.custom-picker(title='Сортировать по дате', required)
+									option(value="") Сортировать по дате
+									option(value="") Сортировать по цене
+									option(value="") Сортировать по размеру
+						.category__content
+							ul.category__list.row
+								mixin categoryItem(className, img, name)
+									li(class="col-sm-6 col-md-6 col-lg-4 category__item" + className)
+										.category__img(style="background-image: url(" + require('../../components/images/girl-' + img + '.jpg') + ")")
+											.category__add-to-cart
+												a(href="item.html").category__buy Купить
+												a(href="#").category__fav
+										.category__name
+											p #{name}
+										.category__price
+											block
+								- var newItem = " category__item--new";
+								- var newSale = " category__item--sale";
+								+categoryItem(newSale, '9', 'Тут будет название товара')
+									p.category__price--old 40,00
+										i грн
+									p 40,00
+										i грн
+								+categoryItem(newItem, '9', 'Тут будет название товара')
+									p 40,00
+										i грн
+								+categoryItem('', '9', 'Тут будет название товара')
+									p 40,00
+										i грн
+								+categoryItem('', '9', 'Тут будет название товара')
+									p 40,00
+										i грн
+								+categoryItem(newSale, '9', 'Тут будет название товара')
+									p.category__price--old 40,00
+										i грн
+									p 40,00
+										i грн
+								+categoryItem('', '9', 'Тут будет название товара')
+									p 40,00
+										i грн
+								+categoryItem('', '9', 'Тут будет название товара')
+									p 40,00
+										i грн
+								+categoryItem(newItem, '9', 'Тут будет название товара')
+									p 40,00
+										i грн
+								+categoryItem('', '9', 'Тут будет название товара')
+									p 40,00
+										i грн
+						.category__pagination
+							.pagination-block
+								.pagination-total
+									p Показано 
+										i 1 - 8
+										span из
+										i 1000
+								.pagination.loop-pagination
+									a.prev.page-numbers(href='#') Назад
+										i.arrow.left
+									div
+										span.page-numbers.current 01
+										a.page-numbers.total(href='#') / 09
+									a.next.page-numbers(href='#') Вперед
+										i.arrow.right
+		section.item__free
+			.item__free-block
+				h2 Бесплатная доставка
+				p
+					| бесплатная доставка при покупке на сумму от 2000 грн
+				a(href="guarantees.html").btn Подробнее

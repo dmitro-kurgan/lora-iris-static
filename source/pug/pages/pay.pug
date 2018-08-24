@@ -1,0 +1,165 @@
+extends ../templates/base
+
+block variables
+	- var classBody = 'pay-page';
+	- var classWrapper = 'pay';
+	- var page = '';
+
+block title
+	title Оплата
+
+block header
+	include ../modules/header
+	+header()
+
+block main
+	section.breadcrumb
+		.container
+			.breadcrumb__content
+				.pay__title
+					h1 Оплата
+				ul.clearfix
+					li
+						a(href='./') Главная
+					li
+						a(href='category.html') Категории
+					li
+						a(href='category.html') Нижнее белье
+					li
+						a(href='category.html') Бюстгальтер 621
+					li
+						a(href='cart.html') Корзина
+					li Оплата
+	.pay
+		section.pay__block
+			.container
+				.pay__top
+					img(src=require('../../components/images/i.png'), alt="")
+					p
+						| Раннее совершали покупку?
+						a(href="#" data-toggle="modal", data-target="#enterModal") Нажмите сюда чтобы ВОЙТИ
+				form.row
+					.pay__left.col-sm-7
+						h2 Оформление заказа
+						.row
+							.form-group.col-sm-6
+								label(for="firstname") Имя*
+								input.form-control(type="text", name="name", id="firstname", required)
+							.form-group.col-sm-6
+								label(for="lastname") Фамилия*
+								input.form-control(type="text", name="lastname", id="lastname", required)
+							.form-group.col-sm-6
+								label(for="tel") Телефон*
+								input.form-control(type="text", name="tel", id="tel", required)
+							.form-group.col-sm-6
+								label(for="email") Email-адрес*
+								input.form-control(type="text", name="email", id="email", required)
+							.form-group.col-sm-12
+								label(for="city") Город*
+								input.form-control(type="text", name="city", id="city", placeholder="Введите город...", required)
+							.form-group.col-sm-12
+								label(for="radio1") Способ доставки*
+							.form-group.col-sm-6
+								.checkbox
+									label(for='radio1')
+										input(type='radio', name='radio', id='radio1')
+										.checkbox-square
+										| Новая почта
+							.form-group.col-sm-6
+								.checkbox
+									label(for='radio2')
+										input(type='radio', name='radio', id='radio2')
+										.checkbox-square
+										| Самовывоз
+							.form-group.col-sm-6
+								.checkbox
+									label(for='radio3')
+										input(type='radio', name='radio', id='radio3')
+										.checkbox-square
+										| ИнТайм
+							.form-group.col-sm-6
+								.checkbox
+									label(for='radio4')
+										input(type='radio', name='radio', id='radio4')
+										.checkbox-square
+										| Пятый вид доставки
+							.form-group.col-sm-6
+								.checkbox
+									label(for='radio5')
+										input(type='radio', name='radio', id='radio5')
+										.checkbox-square
+										| Курьером по Харькову
+							.form-group.col-sm-12
+								label(for="flat") Дополнительная информация*
+							.form-group.col-sm-12
+								input.form-control(type="text", name="flat", id="flat", placeholder="Квартира, комната, блок и т.д.", required)
+							.form-group.col-sm-12
+								textarea.form-control(name="addInfo", id="addInfo", placeholder="Примечания к вашему заказу.", required)
+							.form-group.col-sm-12
+								.checkbox
+									label(for='checkbox6')
+										input(type='checkbox', name='checkbox6', id='checkbox6')
+										.checkbox-square
+										| Созать аккаунт
+								.pay__create-acc
+									p
+										| Создайте учетную запись, заполнив поля ввода ниже. Если вы ранее совершали уже покупку, и являетесь нашим клиентом,пожалуйста, перейдите по ссылке в верхней части страницы.
+							.form-group.col-sm-12
+								label(for="new-pwd") Придумайте пароль*
+								input.form-control(type="password", name="new-pwd", id="new-pwd", placeholder="Пароль (не менее 6 символов)", required)
+								.alert--save Надежный
+								.alert--not-save Ненадежный
+								.alert The password should be at least seven character long. The password should be at least seven character long.
+					.pay__right.col-sm-5
+						h2 Ваш заказ
+						.pay__info
+							ul
+								li
+									p
+										| Товар
+									span Всего
+								li
+									p
+										| Бюстгальтер 7629 x 1
+									span 120
+										i грн
+								li
+									p
+										| Сумма
+									span 207
+										i грн
+								li
+									p
+										| Всего
+									span 207
+										i грн
+						.pay__method
+							ul.clearfix
+								li
+									.radio
+										label(for='pay-radio1')
+											input(type='radio', name='radio2', id='pay-radio1')
+											.radio-square
+											| Наложенный платеж
+								li
+									.radio
+										label(for='pay-radio2')
+											input(type='radio', name='radio2', id='pay-radio2')
+											.radio-square
+											| Оплата на карту
+										.pay__method-cards
+											ul
+												li
+
+													img(src=require("../../components/images/cards-1.png"), alt="")
+												li
+
+													img(src=require("../../components/images/cards-2.png"), alt="")
+												li
+
+													img(src=require("../../components/images/cards-3.png"), alt="")
+							.pay__method-alert
+								p
+									| Произведите платеж непосредственно на наш банковский счет. Наш менеджер в кратчайшие сроки свяжется с вами для уточнения всех деталей.
+							button.btn(type="submit") Разместить заказ
+		include ../modules/modals

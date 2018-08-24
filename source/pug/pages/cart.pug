@@ -1,0 +1,155 @@
+extends ../templates/base
+
+block variables
+	- var classBody = 'cart-page';
+	- var classWrapper = 'cart';
+	- var page = "";
+
+block title
+	title Корзина
+
+block header
+	include ../modules/header
+	+header()
+
+block main
+	section.breadcrumb
+		.container
+			.breadcrumb__content
+				.cart__title
+					h1 Корзина
+				ul.clearfix
+					li
+						a(href='./') Главная
+					li Корзина
+	.cart
+		.container
+			section.cart__main
+				.table-responsive
+					table.table
+						thead.cart__main-head
+							tr
+								th
+								th
+									p Товар
+								th
+									p Цена
+								th
+									p Размер
+								th
+									p Количество
+								th
+									p Всего
+						tbody.cart__main-body
+							tr.cart__main-item
+								td.cart__main-img
+									a(href="#").cart__del-item
+									img(src=require("../../components/images/girl-6.jpg"), alt="")
+								td.cart__main-name
+									p Название товара
+								td.cart__main-price
+									p 120
+										i грн
+								td.cart__main-size
+									select.selectpicker.custom-picker(title='30 DD', required)
+										option(value="") 30 DD
+										option(value="") 30 DD
+										option(value="") 30 DD
+										option(value="") 30 DD
+								td.cart__main-amount
+									.item__choose-item
+										.item__choose-amount
+											span.minus -
+											input.input(value='1', type='number')
+											span.plus +
+								td.cart__main-total
+									p 120
+										i грн
+							tr.cart__main-item
+								td.cart__main-img
+									a(href="#").cart__del-item
+									img(src=require("../../components/images/girl-4.jpg"), alt="")
+								td.cart__main-name
+									p Название товара
+								td.cart__main-price
+									p 120
+										i грн
+								td.cart__main-size
+									select.selectpicker.custom-picker(title='30 DD', required)
+										option(value="") 30 DD
+										option(value="") 30 DD
+										option(value="") 30 DD
+										option(value="") 30 DD
+								td.cart__main-amount
+									.item__choose-item
+										.item__choose-amount
+											span.minus -
+											input.input(value='1', type='number')
+											span.plus +
+								td.cart__main-total
+									p 120
+										i грн
+			section.cart__manage
+				a(href="#").btn.cart__del-cart Очистить корзину
+				a(href="category.html").btn.cart__continue Продолжить покупки
+			section.cart__bottom
+				.row
+					.col-sm-5
+						.cart__slider-suggest
+							h2 Вам также может понравится...
+							.slider.slick-suggest
+								mixin slickItem(className, img, name)
+									div
+										div(class="slick-suggest__item" + className)
+											.slick-suggest__img(style="background-image: url(" + require('../../components/images/girl-' + img + '.jpg') + ")")
+												.slick-suggest__add-to-cart
+													a(href="item.html").slick-suggest__buy Купить
+													a(href="#").slick-suggest__fav
+											.slick-suggest__name
+												p #{name}
+											.slick-suggest__price
+												block
+								- var newItem = " slick-suggest__item--new";
+								- var newSale = " slick-suggest__item--sale";
+								+slickItem(newItem, '6', 'Тут будет название товара')
+									p 60,00
+										i грн
+								+slickItem(newSale, '9', 'Тут будет название товара')
+									p.slick-suggest__price--old 40,00
+										i грн
+									p 40,00
+										i грн
+								+slickItem('', '10', 'Тут будет название товара')
+									p 800,00
+										i грн
+								+slickItem('', '8', 'Тут будет название товара')
+									p 40,00
+										i грн
+								+slickItem(newItem, '7', 'Тут будет название товара')
+									p 60,00
+										i грн
+								+slickItem('', '6', 'Тут будет название товара')
+									p.slick-suggest__price--old 40,00
+										i грн
+									p 40,00
+										i грн
+								+slickItem(newSale, '3', 'Тут будет название товара')
+									p 800,00
+										i грн
+								+slickItem('', '7', 'Тут будет название товара')
+									p 40,00
+										i грн
+					.col-sm-7
+						.cart__total
+							h2 Общая сумма корзины
+							.cart__total-content
+								ul
+									li
+										p Сумма
+										span 240
+											i грн
+									li
+										p Всего
+										span 240
+											i грн
+								a(href="pay.html").btn Оформить заказ

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Аккаунт</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no">
+  <link href="./css/style.css" rel="stylesheet"></head>
+  <body class="account-page">
+    <div class="wrapper wrapper--account">
+            <header>
+              <div class="header">
+                <div class="container-fluid">
+                  <div class="header__content">
+                    <div class="header__left">
+                      <div class="header__hamburger" id="hamburger"><span class="top"></span><span class="mid"></span><span class="bottom"></span></div>
+                      <div class="header__nav" id="menu"><a class="header__close-menu" href="#" id="menuClose"></a>
+                        <ul>
+                          <li><a href="index.html">Главная</a></li>
+                          <li><a href="category.html">Новинки</a></li>
+                          <li><a href="category.html">Комплекты</a></li>
+                          <li><a href="category.html">Бюстгалтеры</a></li>
+                          <li><a href="category.html">Трусики</a></li>
+                          <li><a href="blog.html">Статьи</a></li>
+                          <li><a href="guarantees.html">Доставка и оплата</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="header__center">
+                      <div class="header__logo"><a href="./"><img src="images/logo-img.svg" alt="logo"><img src="images/logo-text.svg" alt="logo"></a></div>
+                    </div>
+                    <div class="header__right">
+                      <div class="header__fav" id="headerFav"><a href="favourites.html">
+                          <p>Избранное</p><i>(0)</i></a></div>
+                      <div class="header__cur" id="headerCur"><a href="#">USD</a>
+                        <div class="header__cur-sub-menu">
+                          <ul>
+                            <li><a href="#">USD</a></li>
+                            <li><a href="#">UAH</a></li>
+                            <li><a href="#">RUB</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="header__acc" id="headerAcc"><a class="btn" href="account-enter.html">Аккаунт</a></div>
+                      <div class="header__cart" id="headerCart"><a href="#"><i>(0)</i></a>
+                        <div class="header__cart-box" id="headerCartBox">
+                          <div class="header__cart-box-inner">
+                            <ul class="header__cart-box-list">
+                                                      <li class="header__cart-box-item">
+                                                        <div class="header__cart-box-left">
+                                                          <div class="header__cart-box-del-item"><a href="#"></a></div>
+                                                        </div>
+                                                        <div class="header__cart-box-right">
+                                                          <div class="header__cart-box-info">
+                                                            <div class="header__cart-box-name">
+                                                              <p>Бюстгальтер 621</p>
+                                                            </div>
+                                                            <div class="header__cart-box-amount">
+                                                              <p>1 x 107 грн</p>
+                                                            </div>
+                                                            <div class="header__cart-box-color">
+                                                              <p>Белый / 30 DD</p>
+                                                            </div>
+                                                          </div>
+                                                          <div class="header__cart-box-img"><img src="images/girl-6.jpg" alt=""></div>
+                                                        </div>
+                                                      </li>
+                            </ul>
+                            <div class="header__cart-box-manage">
+                              <div class="header__cart-box-del-cart"><a href="#">Очистить корзину</a></div>
+                              <div class="header__cart-box-total">
+                                <p>Всего:<span>107<i>грн</i></span></p>
+                              </div>
+                            </div>
+                            <div class="header__cart-box-bottom"><a class="btn btn--order" href="pay.html">Оформить заказ</a><a class="btn btn--add-to-cart" href="cart.html">В корзину</a></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="header__search" id="headerSearch">
+                        <form>
+                          <input class="form-control" type="text">
+                          <div><a class="fa fa-search" href="#"></a>
+                            <button class="fa fa-search" type="submit"></button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </header>
+      <div class="content">
+        <section class="breadcrumb">
+          <div class="container">
+            <div class="breadcrumb__content">
+              <div class="account__title">
+                <h1>Аккаунт</h1>
+              </div>
+              <ul class="clearfix">
+                <li><a href="./">Главная</a></li>
+                <li>Аккаунт</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <div class="account account--enter container">
+          <section class="account__enter wow fadeIn">
+            <h2>Войти</h2>
+            <p>Если вы уже оформляли заказ на нашем сайте, пожалуйста, введите имя пользователя и пароль в полях ниже. Если вы являетесь новым клиентом, пожалуйста, укажите необходимую информацию об оплате и доставке в соответствующих анкетах.</p>
+            <form class="row">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label for="email">Электронная почта*</label>
+                  <input class="form-control" type="text" name="email" id="email" required>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label for="pwd">Пароль*</label>
+                  <input class="form-control" type="password" name="pwd" id="pwd" required>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <button class="btn" type="submit">Войти</button>
+                  <div class="checkbox">
+                    <label for="checkbox1">
+                      <input type="checkbox" name="checkbox1" id="checkbox1">
+                      <div class="checkbox-square"></div>Запомнить меня
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group clearfix"><a href="#">Забыли свой пароль?</a></div>
+              </div>
+            </form>
+          </section>
+          <section class="account__reg wow fadeIn">
+            <h2>Регистрация</h2>
+            <p>Если вы уже оформляли заказ на нашем сайте, пожалуйста, введите имя пользователя и пароль в полях ниже. Если вы являетесь новым клиентом, пожалуйста, укажите необходимую информацию об оплате и доставке в соответствующих анкетах.</p>
+            <form class="row">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label for="emailReg">Электронная почта*</label>
+                  <input class="form-control" type="text" name="emailReg" id="emailReg" required>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label for="pwdReg">Пароль*</label>
+                  <input class="form-control" type="password" name="pwdReg" id="pwdReg" required>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <button class="btn" type="submit">Регистрация</button>
+                </div>
+              </div>
+            </form>
+          </section>
+        </div>
+      </div>
+<footer>
+  <div class="footer wow fadeInUp">
+    <div class="footer__content">
+      <div class="footer__main">
+        <div class="container">
+          <div class="row">
+            <div class="footer__left col-sm-4">
+              <div class="footer__logo"><a href="./"><img src="images/logo-img.svg" alt="logo"><img src="images/logo-text.svg" alt="logo"></a></div>
+              <p>Разнообразный и богатый опыт начало повседне работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании форм развития..</p>
+              <ul class="footer__socials">
+                <li><a href="#"><i></i><span>Facebook</span></a></li>
+                <li><a href="#"><i></i><span>Instagram</span></a></li>
+                <li><a href="#"><i></i><span>Vkontakte</span></a></li>
+              </ul>
+            </div>
+            <div class="footer__right col-sm-8">
+              <div class="row">
+                <ul class="col-sm-4 col-lg-3">
+                  <li>
+                    <h6>Lora Iris</h6>
+                  </li>
+                  <li><a href="about.html">О компании</a></li>
+                  <li><a href="guarantees.html">Гарантии</a></li>
+                  <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+                <ul class="col-sm-4 col-lg-3">
+                  <li>
+                    <h6>График работы</h6>
+                  </li>
+                  <li><a href="#">Пн-Сб: 9.00 - 21.00</a></li>
+                  <li><a href="#">Вс: 10.00 - 18.00</a></li>
+                </ul>
+                <ul class="col-sm-4 col-lg-3">
+                  <li>
+                    <h6>Представительство в России</h6>
+                  </li>
+                  <li><a href="mailto:lorairiscomercial@gmail.com">lorairiscomercial@gmail.com</a></li>
+                  <li><a href="tel:+79204050602">+79204050602</a></li>
+                  <li><a href="tel:+79304085032">+79304085032</a></li>
+                </ul>
+                <ul class="col-sm-4 col-lg-3">
+                  <li>
+                    <h6>Наши контакты</h6>
+                  </li>
+                  <li><a href="tel:+380000000000">+ 380 00 00 00 000</a></li>
+                  <li><a href="tel:+380976309783">+ 380 97 63 09 783</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="footer__bottom">
+          <div class="footer__bottom-left">
+            <div class="footer__copyright">
+              <p>Copyright<span id="year"></span>© LORAIRIS / All rights reserved</p>
+            </div>
+          </div>
+          <div class="footer__bottom-right">
+            <div class="footer__develop"><a href="http://unitspace.top" target="_blank">
+                <p>Разработка и создание сайтов Киев, Харьков</p></a></div>
+            <div class="footer__cards">
+              <ul>
+                <li><a href="#"><img src="images/cards-1.png" alt=""></a></li>
+                <li><a href="#"><img src="images/cards-2.png" alt=""></a></li>
+                <li><a href="#"><img src="images/cards-3.png" alt=""></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+    </div>
+  <script type="text/javascript" src="js/bundle.js"></script></body>
+</html>

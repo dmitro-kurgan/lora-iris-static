@@ -1,0 +1,65 @@
+extends ../templates/base
+
+block variables
+	- var classBody = 'account-page';
+	- var classWrapper = 'account';
+	- var page = "";
+
+block title
+	title Аккаунт
+
+block header
+	include ../modules/header
+	+header()
+
+block main
+	section.breadcrumb
+		.container
+			.breadcrumb__content
+				.account__title
+					h1 Аккаунт
+				ul.clearfix
+					li
+						a(href='./') Главная
+					li Аккаунт
+	.account.account--enter.container
+		section.account__enter.wow.fadeIn
+			h2 Войти
+			p
+				| Если вы уже оформляли заказ на нашем сайте, пожалуйста, введите имя пользователя и пароль в полях ниже. Если вы являетесь новым клиентом, пожалуйста, укажите необходимую информацию об оплате и доставке в соответствующих анкетах.
+			form.row
+				.col-sm-6
+					.form-group
+						label(for="email") Электронная почта*
+						input.form-control(type="text", name="email", id="email", required)
+				.col-sm-6
+					.form-group
+						label(for="pwd") Пароль*
+						input.form-control(type="password", name="pwd", id="pwd", required)
+				.col-sm-6
+					.form-group
+						button(type="submit").btn Войти
+						.checkbox
+							label(for='checkbox1')
+								input(type='checkbox', name='checkbox1', id='checkbox1')
+								.checkbox-square
+								| Запомнить меня
+				.col-sm-6
+					.form-group.clearfix
+						a(href="#") Забыли свой пароль?
+		section.account__reg.wow.fadeIn
+			h2 Регистрация
+			p
+				| Если вы уже оформляли заказ на нашем сайте, пожалуйста, введите имя пользователя и пароль в полях ниже. Если вы являетесь новым клиентом, пожалуйста, укажите необходимую информацию об оплате и доставке в соответствующих анкетах.
+			form.row
+				.col-sm-6
+					.form-group
+						label(for="emailReg") Электронная почта*
+						input.form-control(type="text", name="emailReg", id="emailReg", required)
+				.col-sm-6
+					.form-group
+						label(for="pwdReg") Пароль*
+						input.form-control(type="password", name="pwdReg", id="pwdReg", required)
+				.col-sm-6
+					.form-group
+						button(type="submit").btn Регистрация

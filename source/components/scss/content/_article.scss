@@ -1,0 +1,135 @@
+.article {
+	&__title {
+		max-width: 540px;
+	}
+	&__data {
+		text-align: center;
+		background-color: #fcfafc;
+		padding: 10px 0;
+		p {
+			font-size: 16px;
+			font-weight: 300;
+			color: #4a4a4a;
+			text-transform: uppercase;
+		}
+	}
+	&__img {
+		margin-top: 18px;
+		height: 445px;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: relative;
+		@media #{$mobile} {
+			height: 250px;
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			z-index: -1;
+			right: -30px;
+			bottom: -35px;
+			width: 987px;
+			height: 388px;
+			border: 1px solid #d4d0d9;
+			@media #{$mobile} {
+				height: 250px;
+			}
+		}
+		&-wrapper {
+			margin-top: 28px;
+			background-color: #f8f6f9;
+			height: 385px;
+			position: relative;
+			z-index: -1;
+			@media #{$mobile} {
+				height: 250px;
+			}
+		}
+	}
+	&__info {
+		margin-top: 150px;
+		@media #{$mobile} {
+			margin-top: 75px;
+		}
+		h2 {
+			font-size: 24px;
+			margin-bottom: 20px;
+		}
+		p {
+			font-size: 18px;
+			font-weight: 300;
+			line-height: 24px;
+			& + p {
+				margin-top: 20px;
+			}
+		}
+		q {
+			font-family: $font2;
+			font-weight: 500;
+			font-style: italic;
+			margin: 45px 0;
+			display: block;
+			font-size: 20px;
+			line-height: 24px;
+			color: #595858;
+			padding: 20px 20px 25px 20px;
+			border: 2px solid $victoria;
+		}
+		
+	}
+	&__quote {
+		margin-top: 55px;
+		margin-bottom: 55px;
+		padding-top: 30px;
+		border-top: 1px solid #c6c6c6;
+		blockquote {
+			max-width: 590px;
+			margin: auto;
+			text-align: center;
+			font-family: $font2;
+			font-weight: 500;
+			font-style: italic;
+			line-height: 36px;
+			color: $victoria;
+			font-size: 24px;
+		}
+	}
+	&__share {
+		background-color: #f8f6f9;
+		padding: 20px 0;
+		&-content {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		p {
+			font-size: 16px;
+		}
+		ul {
+			margin-left: 22px;
+		}
+		li {
+			float: left;
+			& + li {
+				margin-left: 7px;
+			}
+		}
+		a {
+			width: 25px;
+			height: 25px;
+			border-radius: 50%;
+			display: block;
+			background-color: #000;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			&:hover {
+				background-color: $victoria;
+			}
+			i {
+				color: #fff;
+			}
+		}
+	}
+}

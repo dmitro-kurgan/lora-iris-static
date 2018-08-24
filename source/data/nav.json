@@ -1,0 +1,11 @@
+{
+  "navPages": {
+    "Главная" : "./",
+    "Новинки" : "category.html",
+    "Комплекты" : "category.html",
+    "Бюстгалтеры" : "category.html",
+    "Трусики" : "category.html",
+    "Статьи" : "blog.html",
+    "Доставка и оплата" : "guarantees.html"
+  }
+}

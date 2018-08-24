@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Страница товара</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no">
+  <link href="./css/style.css" rel="stylesheet"></head>
+  <body class="category-page">
+    <div class="wrapper wrapper--category">
+            <header>
+              <div class="header">
+                <div class="container-fluid">
+                  <div class="header__content">
+                    <div class="header__left">
+                      <div class="header__hamburger" id="hamburger"><span class="top"></span><span class="mid"></span><span class="bottom"></span></div>
+                      <div class="header__nav" id="menu"><a class="header__close-menu" href="#" id="menuClose"></a>
+                        <ul>
+                          <li><a href="index.html">Главная</a></li>
+                          <li><a class="active" href="category.html">Новинки</a></li>
+                          <li><a href="category.html">Комплекты</a></li>
+                          <li><a href="category.html">Бюстгалтеры</a></li>
+                          <li><a href="category.html">Трусики</a></li>
+                          <li><a href="blog.html">Статьи</a></li>
+                          <li><a href="guarantees.html">Доставка и оплата</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="header__center">
+                      <div class="header__logo"><a href="./"><img src="images/logo-img.svg" alt="logo"><img src="images/logo-text.svg" alt="logo"></a></div>
+                    </div>
+                    <div class="header__right">
+                      <div class="header__fav" id="headerFav"><a href="favourites.html">
+                          <p>Избранное</p><i>(0)</i></a></div>
+                      <div class="header__cur" id="headerCur"><a href="#">USD</a>
+                        <div class="header__cur-sub-menu">
+                          <ul>
+                            <li><a href="#">USD</a></li>
+                            <li><a href="#">UAH</a></li>
+                            <li><a href="#">RUB</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="header__acc" id="headerAcc"><a class="btn" href="account-enter.html">Аккаунт</a></div>
+                      <div class="header__cart" id="headerCart"><a href="#"><i>(0)</i></a>
+                        <div class="header__cart-box" id="headerCartBox">
+                          <div class="header__cart-box-inner">
+                            <ul class="header__cart-box-list">
+                                                      <li class="header__cart-box-item">
+                                                        <div class="header__cart-box-left">
+                                                          <div class="header__cart-box-del-item"><a href="#"></a></div>
+                                                        </div>
+                                                        <div class="header__cart-box-right">
+                                                          <div class="header__cart-box-info">
+                                                            <div class="header__cart-box-name">
+                                                              <p>Бюстгальтер 621</p>
+                                                            </div>
+                                                            <div class="header__cart-box-amount">
+                                                              <p>1 x 107 грн</p>
+                                                            </div>
+                                                            <div class="header__cart-box-color">
+                                                              <p>Белый / 30 DD</p>
+                                                            </div>
+                                                          </div>
+                                                          <div class="header__cart-box-img"><img src="images/girl-6.jpg" alt=""></div>
+                                                        </div>
+                                                      </li>
+                            </ul>
+                            <div class="header__cart-box-manage">
+                              <div class="header__cart-box-del-cart"><a href="#">Очистить корзину</a></div>
+                              <div class="header__cart-box-total">
+                                <p>Всего:<span>107<i>грн</i></span></p>
+                              </div>
+                            </div>
+                            <div class="header__cart-box-bottom"><a class="btn btn--order" href="pay.html">Оформить заказ</a><a class="btn btn--add-to-cart" href="cart.html">В корзину</a></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="header__search" id="headerSearch">
+                        <form>
+                          <input class="form-control" type="text">
+                          <div><a class="fa fa-search" href="#"></a>
+                            <button class="fa fa-search" type="submit"></button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </header>
+      <div class="content">
+        <section class="breadcrumb">
+          <div class="container">
+            <div class="breadcrumb__content">
+              <div class="category__title">
+                <h1>Категории</h1>
+              </div>
+              <ul class="clearfix">
+                <li><a href="./">Главная</a></li>
+                <li><a href="category-2.html">Категории</a></li>
+                <li>Нижнее белье</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <div class="category">
+          <section class="category__block">
+            <div class="container">
+              <div class="row">
+                <form class="category__left col-md-3">
+                  <div class="category__search">
+                    <h2>Поиск</h2>
+                    <div class="form-group">
+                      <input class="form-control" type="search" placeholder="Поиск товара...">
+                      <button class="fa fa-search" type="submit"></button>
+                    </div>
+                  </div>
+                  <div class="panel-group wholesale-catalog__accordion" id="accordion">
+                                        <div class="panel">
+                                          <div class="panel-heading">
+                                            <h2><a data-toggle="collapse" href="#collapse1" aria-expanded="true">Категории товара</a></h2>
+                                          </div>
+                                          <div class="panel-collapse collapse in" id="collapse1">
+                                            <div class="panel-body">
+                                              <ul class="category__filter-list">
+                                                <li><a href="category-2.html">
+                                                    <p>Нижнее белье</p><span>(100)</span></a></li>
+                                                <li><a href="category-2.html">
+                                                    <p>Бюстгальтеры</p><span>(973)</span></a></li>
+                                                <li><a href="category-2.html">
+                                                    <p>Комплекты</p><span>(40)</span></a></li>
+                                                <li><a href="category-2.html">
+                                                    <p>Трусики</p><span>(10)</span></a></li>
+                                                <li><a href="category-2.html">
+                                                    <p>Новинки</p><span>(900)</span></a></li>
+                                              </ul>
+                                              <div class="category__filter-price">
+                                                <h2>Фильтр по цене</h2>
+                                                <div id="slider-range"></div>
+                                                <div class="category__price-block">
+                                                  <div class="category__price-min">
+                                                    <p id="price1"></p><i>грн</i>
+                                                  </div>
+                                                  <div class="category__price-max">
+                                                    <p id="price2"></p><i>грн</i>
+                                                  </div>
+                                                </div>
+                                                <button class="btn" type="submit">Применить</button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="panel">
+                                          <div class="panel-heading">
+                                            <h2><a data-toggle="collapse" href="#collapse2" aria-expanded="true">Размер</a></h2>
+                                          </div>
+                                          <div class="panel-collapse collapse in" id="collapse2">
+                                            <div class="panel-body">
+                                              <ul class="category__filter-list">
+                                                                  <li>
+                                                                    <div class="checkbox-block">
+                                                                      <div class="checkbox">
+                                                                        <label for="checkbox1">
+                                                                          <input type="checkbox" name="checkbox" id="checkbox1">
+                                                                          <div class="checkbox-square"></div>
+                                                                          <p>B (70, 75, 80)</p>
+                                                                        </label>
+                                                                      </div>
+                                                                    </div>
+                                                                  </li>
+                                                                  <li>
+                                                                    <div class="checkbox-block">
+                                                                      <div class="checkbox">
+                                                                        <label for="checkbox2">
+                                                                          <input type="checkbox" name="checkbox" id="checkbox2">
+                                                                          <div class="checkbox-square"></div>
+                                                                          <p>D (70, 75, 80)</p>
+                                                                        </label>
+                                                                      </div>
+                                                                    </div>
+                                                                  </li>
+                                                                  <li>
+                                                                    <div class="checkbox-block">
+                                                                      <div class="checkbox">
+                                                                        <label for="checkbox3">
+                                                                          <input type="checkbox" name="checkbox" id="checkbox3">
+                                                                          <div class="checkbox-square"></div>
+                                                                          <p>D (75, 80, 85)</p>
+                                                                        </label>
+                                                                      </div>
+                                                                    </div>
+                                                                  </li>
+                                                                  <li>
+                                                                    <div class="checkbox-block">
+                                                                      <div class="checkbox">
+                                                                        <label for="checkbox4">
+                                                                          <input type="checkbox" name="checkbox" id="checkbox4">
+                                                                          <div class="checkbox-square"></div>
+                                                                          <p>С (70, 75, 80)</p>
+                                                                        </label>
+                                                                      </div>
+                                                                    </div>
+                                                                  </li>
+                                                                  <li>
+                                                                    <div class="checkbox-block">
+                                                                      <div class="checkbox">
+                                                                        <label for="checkbox5">
+                                                                          <input type="checkbox" name="checkbox" id="checkbox5">
+                                                                          <div class="checkbox-square"></div>
+                                                                          <p>С (75, 80, 85)</p>
+                                                                        </label>
+                                                                      </div>
+                                                                    </div>
+                                                                  </li>
+                                                                  <li>
+                                                                    <div class="checkbox-block">
+                                                                      <div class="checkbox">
+                                                                        <label for="checkbox6">
+                                                                          <input type="checkbox" name="checkbox" id="checkbox6">
+                                                                          <div class="checkbox-square"></div>
+                                                                          <p>(M, L, XL)</p>
+                                                                        </label>
+                                                                      </div>
+                                                                    </div>
+                                                                  </li>
+                                                                  <li>
+                                                                    <div class="checkbox-block">
+                                                                      <div class="checkbox">
+                                                                        <label for="checkbox7">
+                                                                          <input type="checkbox" name="checkbox" id="checkbox7">
+                                                                          <div class="checkbox-square"></div>
+                                                                          <p>(S, M, L)</p>
+                                                                        </label>
+                                                                      </div>
+                                                                    </div>
+                                                                  </li>
+                                                                  <li>
+                                                                    <div class="checkbox-block">
+                                                                      <div class="checkbox">
+                                                                        <label for="checkbox8">
+                                                                          <input type="checkbox" name="checkbox" id="checkbox8">
+                                                                          <div class="checkbox-square"></div>
+                                                                          <p>B (75, 75, 75)</p>
+                                                                        </label>
+                                                                      </div>
+                                                                    </div>
+                                                                  </li>
+                                                                  <li>
+                                                                    <div class="checkbox-block">
+                                                                      <div class="checkbox">
+                                                                        <label for="checkbox9">
+                                                                          <input type="checkbox" name="checkbox" id="checkbox9">
+                                                                          <div class="checkbox-square"></div>
+                                                                          <p>B (75, 80, 85)</p>
+                                                                        </label>
+                                                                      </div>
+                                                                    </div>
+                                                                  </li>
+                                                                  <li>
+                                                                    <div class="checkbox-block">
+                                                                      <div class="checkbox">
+                                                                        <label for="checkbox10">
+                                                                          <input type="checkbox" name="checkbox" id="checkbox10">
+                                                                          <div class="checkbox-square"></div>
+                                                                          <p>C (75, 75, 75)</p>
+                                                                        </label>
+                                                                      </div>
+                                                                    </div>
+                                                                  </li>
+                                                                  <li>
+                                                                    <div class="checkbox-block">
+                                                                      <div class="checkbox">
+                                                                        <label for="checkbox11">
+                                                                          <input type="checkbox" name="checkbox" id="checkbox11">
+                                                                          <div class="checkbox-square"></div>
+                                                                          <p>D (80, 85, 90)</p>
+                                                                        </label>
+                                                                      </div>
+                                                                    </div>
+                                                                  </li>
+                                                                  <li>
+                                                                    <div class="checkbox-block">
+                                                                      <div class="checkbox">
+                                                                        <label for="checkbox12">
+                                                                          <input type="checkbox" name="checkbox" id="checkbox12">
+                                                                          <div class="checkbox-square"></div>
+                                                                          <p>С (85, 90, 95)</p>
+                                                                        </label>
+                                                                      </div>
+                                                                    </div>
+                                                                  </li>
+                                                                  <li>
+                                                                    <div class="checkbox-block">
+                                                                      <div class="checkbox">
+                                                                        <label for="checkbox13">
+                                                                          <input type="checkbox" name="checkbox" id="checkbox13">
+                                                                          <div class="checkbox-square"></div>
+                                                                          <p>С (80, 85, 90)</p>
+                                                                        </label>
+                                                                      </div>
+                                                                    </div>
+                                                                  </li>
+                                                                  <li>
+                                                                    <div class="checkbox-block">
+                                                                      <div class="checkbox">
+                                                                        <label for="checkbox14">
+                                                                          <input type="checkbox" name="checkbox" id="checkbox14">
+                                                                          <div class="checkbox-square"></div>
+                                                                          <p>С (85, 85, 85)</p>
+                                                                        </label>
+                                                                      </div>
+                                                                    </div>
+                                                                  </li>
+                                              </ul>
+                                            </div>
+                                          </div>
+                                        </div>
+                  </div>
+                </form>
+                <div class="category__right col-md-9">
+                  <div class="category__top">
+                    <div class="category__top-left">
+                      <ul class="clearfix">
+                        <li><a class="active category__first-screen" href="category-2.html">
+                            <div><span></span><span></span><span></span></div></a></li>
+                        <li><a class="category__second-screen" href="category.html">
+                            <div><span></span><span></span><span></span><span></span></div></a></li>
+                      </ul>
+                    </div>
+                    <div class="category__top-center">
+                      <h2>Бюстгальтеры</h2>
+                    </div>
+                    <div class="category__top-right">
+                      <select class="selectpicker custom-picker" title="Сортировать по дате" required>
+                        <option value="">Сортировать по дате</option>
+                        <option value="">Сортировать по цене</option>
+                        <option value="">Сортировать по размеру</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="category__content">
+                    <ul class="category__list category__list-2 row">
+                                            <li class="row category__item category__item--sale">
+                                              <div class="col-sm-4">
+                                                <div class="category__img" style="background-image: url(images/girl-9.jpg)"></div>
+                                              </div>
+                                              <div class="col-sm-8">
+                                                <div class="category__name">
+                                                  <p>Тут будет название товара</p>
+                                                </div>
+                                                <div class="category__price">
+                                                  <p class="category__price--old">40,00<i>грн</i></p>
+                                                  <p>40,00<i>грн</i></p>
+                                                </div>
+                                                <div class="item__choose-color">
+                                                  <p>цвета:</p>
+                                                  <ul>
+                                                    <li><a href="#" style="background-color: #fff"></a></li>
+                                                    <li><a href="#" style="background-color: #ffe5c8"></a></li>
+                                                    <li><a href="#" style="background-color: #56497c"></a></li>
+                                                  </ul>
+                                                </div>
+                                                <div class="category__info-txt">
+                                                  <p>Lora Iris - украинская торговая марка модного  нижнего белья. Компания занимается оптовой и розничной торговлей на территории Украины и за ее пределами. Дизайном и разработкой моделей нижнего белья занимаются опытные и талантливые дизайнеры. На территории ряда стран Lora Iris уже завоевала симпатию доверие потребитель благодаря высокому качеству изделий и приятным ценам.белья. На lorairis.com можно также купить оптом нижнее белье лучших мировых производителей.</p>
+                                                </div>
+                                                <div class="category__add-to-cart"><a class="category__buy" href="item.html">Купить</a><a class="category__fav" href="#"></a></div>
+                                              </div>
+                                            </li>
+                                            <li class="row category__item category__item--new">
+                                              <div class="col-sm-4">
+                                                <div class="category__img" style="background-image: url(images/girl-9.jpg)"></div>
+                                              </div>
+                                              <div class="col-sm-8">
+                                                <div class="category__name">
+                                                  <p>Тут будет название товара</p>
+                                                </div>
+                                                <div class="category__price">
+                                                  <p>40,00<i>грн</i></p>
+                                                </div>
+                                                <div class="item__choose-color">
+                                                  <p>цвета:</p>
+                                                  <ul>
+                                                    <li><a href="#" style="background-color: #fff"></a></li>
+                                                    <li><a href="#" style="background-color: #ffe5c8"></a></li>
+                                                    <li><a href="#" style="background-color: #56497c"></a></li>
+                                                  </ul>
+                                                </div>
+                                                <div class="category__info-txt">
+                                                  <p>Lora Iris - украинская торговая марка модного  нижнего белья. Компания занимается оптовой и розничной торговлей на территории Украины и за ее пределами. Дизайном и разработкой моделей нижнего белья занимаются опытные и талантливые дизайнеры. На территории ряда стран Lora Iris уже завоевала симпатию доверие потребитель благодаря высокому качеству изделий и приятным ценам.белья. На lorairis.com можно также купить оптом нижнее белье лучших мировых производителей.</p>
+                                                </div>
+                                                <div class="category__add-to-cart"><a class="category__buy" href="item.html">Купить</a><a class="category__fav" href="#"></a></div>
+                                              </div>
+                                            </li>
+                                            <li class="row category__item">
+                                              <div class="col-sm-4">
+                                                <div class="category__img" style="background-image: url(images/girl-9.jpg)"></div>
+                                              </div>
+                                              <div class="col-sm-8">
+                                                <div class="category__name">
+                                                  <p>Тут будет название товара</p>
+                                                </div>
+                                                <div class="category__price">
+                                                  <p>40,00<i>грн</i></p>
+                                                </div>
+                                                <div class="item__choose-color">
+                                                  <p>цвета:</p>
+                                                  <ul>
+                                                    <li><a href="#" style="background-color: #fff"></a></li>
+                                                    <li><a href="#" style="background-color: #ffe5c8"></a></li>
+                                                    <li><a href="#" style="background-color: #56497c"></a></li>
+                                                  </ul>
+                                                </div>
+                                                <div class="category__info-txt">
+                                                  <p>Lora Iris - украинская торговая марка модного  нижнего белья. Компания занимается оптовой и розничной торговлей на территории Украины и за ее пределами. Дизайном и разработкой моделей нижнего белья занимаются опытные и талантливые дизайнеры. На территории ряда стран Lora Iris уже завоевала симпатию доверие потребитель благодаря высокому качеству изделий и приятным ценам.белья. На lorairis.com можно также купить оптом нижнее белье лучших мировых производителей.</p>
+                                                </div>
+                                                <div class="category__add-to-cart"><a class="category__buy" href="item.html">Купить</a><a class="category__fav" href="#"></a></div>
+                                              </div>
+                                            </li>
+                                            <li class="row category__item">
+                                              <div class="col-sm-4">
+                                                <div class="category__img" style="background-image: url(images/girl-9.jpg)"></div>
+                                              </div>
+                                              <div class="col-sm-8">
+                                                <div class="category__name">
+                                                  <p>Тут будет название товара</p>
+                                                </div>
+                                                <div class="category__price">
+                                                  <p>40,00<i>грн</i></p>
+                                                </div>
+                                                <div class="item__choose-color">
+                                                  <p>цвета:</p>
+                                                  <ul>
+                                                    <li><a href="#" style="background-color: #fff"></a></li>
+                                                    <li><a href="#" style="background-color: #ffe5c8"></a></li>
+                                                    <li><a href="#" style="background-color: #56497c"></a></li>
+                                                  </ul>
+                                                </div>
+                                                <div class="category__info-txt">
+                                                  <p>Lora Iris - украинская торговая марка модного  нижнего белья. Компания занимается оптовой и розничной торговлей на территории Украины и за ее пределами. Дизайном и разработкой моделей нижнего белья занимаются опытные и талантливые дизайнеры. На территории ряда стран Lora Iris уже завоевала симпатию доверие потребитель благодаря высокому качеству изделий и приятным ценам.белья. На lorairis.com можно также купить оптом нижнее белье лучших мировых производителей.</p>
+                                                </div>
+                                                <div class="category__add-to-cart"><a class="category__buy" href="item.html">Купить</a><a class="category__fav" href="#"></a></div>
+                                              </div>
+                                            </li>
+                                            <li class="row category__item category__item--sale">
+                                              <div class="col-sm-4">
+                                                <div class="category__img" style="background-image: url(images/girl-9.jpg)"></div>
+                                              </div>
+                                              <div class="col-sm-8">
+                                                <div class="category__name">
+                                                  <p>Тут будет название товара</p>
+                                                </div>
+                                                <div class="category__price">
+                                                  <p class="category__price--old">40,00<i>грн</i></p>
+                                                  <p>40,00<i>грн</i></p>
+                                                </div>
+                                                <div class="item__choose-color">
+                                                  <p>цвета:</p>
+                                                  <ul>
+                                                    <li><a href="#" style="background-color: #fff"></a></li>
+                                                    <li><a href="#" style="background-color: #ffe5c8"></a></li>
+                                                    <li><a href="#" style="background-color: #56497c"></a></li>
+                                                  </ul>
+                                                </div>
+                                                <div class="category__info-txt">
+                                                  <p>Lora Iris - украинская торговая марка модного  нижнего белья. Компания занимается оптовой и розничной торговлей на территории Украины и за ее пределами. Дизайном и разработкой моделей нижнего белья занимаются опытные и талантливые дизайнеры. На территории ряда стран Lora Iris уже завоевала симпатию доверие потребитель благодаря высокому качеству изделий и приятным ценам.белья. На lorairis.com можно также купить оптом нижнее белье лучших мировых производителей.</p>
+                                                </div>
+                                                <div class="category__add-to-cart"><a class="category__buy" href="item.html">Купить</a><a class="category__fav" href="#"></a></div>
+                                              </div>
+                                            </li>
+                                            <li class="row category__item">
+                                              <div class="col-sm-4">
+                                                <div class="category__img" style="background-image: url(images/girl-9.jpg)"></div>
+                                              </div>
+                                              <div class="col-sm-8">
+                                                <div class="category__name">
+                                                  <p>Тут будет название товара</p>
+                                                </div>
+                                                <div class="category__price">
+                                                  <p>40,00<i>грн</i></p>
+                                                </div>
+                                                <div class="item__choose-color">
+                                                  <p>цвета:</p>
+                                                  <ul>
+                                                    <li><a href="#" style="background-color: #fff"></a></li>
+                                                    <li><a href="#" style="background-color: #ffe5c8"></a></li>
+                                                    <li><a href="#" style="background-color: #56497c"></a></li>
+                                                  </ul>
+                                                </div>
+                                                <div class="category__info-txt">
+                                                  <p>Lora Iris - украинская торговая марка модного  нижнего белья. Компания занимается оптовой и розничной торговлей на территории Украины и за ее пределами. Дизайном и разработкой моделей нижнего белья занимаются опытные и талантливые дизайнеры. На территории ряда стран Lora Iris уже завоевала симпатию доверие потребитель благодаря высокому качеству изделий и приятным ценам.белья. На lorairis.com можно также купить оптом нижнее белье лучших мировых производителей.</p>
+                                                </div>
+                                                <div class="category__add-to-cart"><a class="category__buy" href="item.html">Купить</a><a class="category__fav" href="#"></a></div>
+                                              </div>
+                                            </li>
+                                            <li class="row category__item">
+                                              <div class="col-sm-4">
+                                                <div class="category__img" style="background-image: url(images/girl-9.jpg)"></div>
+                                              </div>
+                                              <div class="col-sm-8">
+                                                <div class="category__name">
+                                                  <p>Тут будет название товара</p>
+                                                </div>
+                                                <div class="category__price">
+                                                  <p>40,00<i>грн</i></p>
+                                                </div>
+                                                <div class="item__choose-color">
+                                                  <p>цвета:</p>
+                                                  <ul>
+                                                    <li><a href="#" style="background-color: #fff"></a></li>
+                                                    <li><a href="#" style="background-color: #ffe5c8"></a></li>
+                                                    <li><a href="#" style="background-color: #56497c"></a></li>
+                                                  </ul>
+                                                </div>
+                                                <div class="category__info-txt">
+                                                  <p>Lora Iris - украинская торговая марка модного  нижнего белья. Компания занимается оптовой и розничной торговлей на территории Украины и за ее пределами. Дизайном и разработкой моделей нижнего белья занимаются опытные и талантливые дизайнеры. На территории ряда стран Lora Iris уже завоевала симпатию доверие потребитель благодаря высокому качеству изделий и приятным ценам.белья. На lorairis.com можно также купить оптом нижнее белье лучших мировых производителей.</p>
+                                                </div>
+                                                <div class="category__add-to-cart"><a class="category__buy" href="item.html">Купить</a><a class="category__fav" href="#"></a></div>
+                                              </div>
+                                            </li>
+                                            <li class="row category__item category__item--new">
+                                              <div class="col-sm-4">
+                                                <div class="category__img" style="background-image: url(images/girl-9.jpg)"></div>
+                                              </div>
+                                              <div class="col-sm-8">
+                                                <div class="category__name">
+                                                  <p>Тут будет название товара</p>
+                                                </div>
+                                                <div class="category__price">
+                                                  <p>40,00<i>грн</i></p>
+                                                </div>
+                                                <div class="item__choose-color">
+                                                  <p>цвета:</p>
+                                                  <ul>
+                                                    <li><a href="#" style="background-color: #fff"></a></li>
+                                                    <li><a href="#" style="background-color: #ffe5c8"></a></li>
+                                                    <li><a href="#" style="background-color: #56497c"></a></li>
+                                                  </ul>
+                                                </div>
+                                                <div class="category__info-txt">
+                                                  <p>Lora Iris - украинская торговая марка модного  нижнего белья. Компания занимается оптовой и розничной торговлей на территории Украины и за ее пределами. Дизайном и разработкой моделей нижнего белья занимаются опытные и талантливые дизайнеры. На территории ряда стран Lora Iris уже завоевала симпатию доверие потребитель благодаря высокому качеству изделий и приятным ценам.белья. На lorairis.com можно также купить оптом нижнее белье лучших мировых производителей.</p>
+                                                </div>
+                                                <div class="category__add-to-cart"><a class="category__buy" href="item.html">Купить</a><a class="category__fav" href="#"></a></div>
+                                              </div>
+                                            </li>
+                                            <li class="row category__item">
+                                              <div class="col-sm-4">
+                                                <div class="category__img" style="background-image: url(images/girl-9.jpg)"></div>
+                                              </div>
+                                              <div class="col-sm-8">
+                                                <div class="category__name">
+                                                  <p>Тут будет название товара</p>
+                                                </div>
+                                                <div class="category__price">
+                                                  <p>40,00<i>грн</i></p>
+                                                </div>
+                                                <div class="item__choose-color">
+                                                  <p>цвета:</p>
+                                                  <ul>
+                                                    <li><a href="#" style="background-color: #fff"></a></li>
+                                                    <li><a href="#" style="background-color: #ffe5c8"></a></li>
+                                                    <li><a href="#" style="background-color: #56497c"></a></li>
+                                                  </ul>
+                                                </div>
+                                                <div class="category__info-txt">
+                                                  <p>Lora Iris - украинская торговая марка модного  нижнего белья. Компания занимается оптовой и розничной торговлей на территории Украины и за ее пределами. Дизайном и разработкой моделей нижнего белья занимаются опытные и талантливые дизайнеры. На территории ряда стран Lora Iris уже завоевала симпатию доверие потребитель благодаря высокому качеству изделий и приятным ценам.белья. На lorairis.com можно также купить оптом нижнее белье лучших мировых производителей.</p>
+                                                </div>
+                                                <div class="category__add-to-cart"><a class="category__buy" href="item.html">Купить</a><a class="category__fav" href="#"></a></div>
+                                              </div>
+                                            </li>
+                    </ul>
+                  </div>
+                  <div class="category__pagination">
+                    <div class="pagination-block">
+                      <div class="pagination-total">
+                        <p>Показано <i>1 - 8</i><span>из</span><i>1000</i></p>
+                      </div>
+                      <div class="pagination loop-pagination"><a class="prev page-numbers" href="#">Назад<i class="arrow left"></i></a>
+                        <div><span class="page-numbers current">01</span><a class="page-numbers total" href="#">/ 09</a></div><a class="next page-numbers" href="#">Вперед<i class="arrow right"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="item__free">
+            <div class="item__free-block">
+              <h2>Бесплатная доставка</h2>
+              <p>бесплатная доставка при покупке на сумму от 2000 грн</p><a class="btn" href="#">Подробнее</a>
+            </div>
+          </section>
+        </div>
+      </div>
+<footer>
+  <div class="footer wow fadeInUp">
+    <div class="footer__content">
+      <div class="footer__main">
+        <div class="container">
+          <div class="row">
+            <div class="footer__left col-sm-4">
+              <div class="footer__logo"><a href="./"><img src="images/logo-img.svg" alt="logo"><img src="images/logo-text.svg" alt="logo"></a></div>
+              <p>Разнообразный и богатый опыт начало повседне работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании форм развития..</p>
+              <ul class="footer__socials">
+                <li><a href="#"><i></i><span>Facebook</span></a></li>
+                <li><a href="#"><i></i><span>Instagram</span></a></li>
+                <li><a href="#"><i></i><span>Vkontakte</span></a></li>
+              </ul>
+            </div>
+            <div class="footer__right col-sm-8">
+              <div class="row">
+                <ul class="col-sm-4 col-lg-3">
+                  <li>
+                    <h6>Lora Iris</h6>
+                  </li>
+                  <li><a href="about.html">О компании</a></li>
+                  <li><a href="guarantees.html">Гарантии</a></li>
+                  <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+                <ul class="col-sm-4 col-lg-3">
+                  <li>
+                    <h6>График работы</h6>
+                  </li>
+                  <li><a href="#">Пн-Сб: 9.00 - 21.00</a></li>
+                  <li><a href="#">Вс: 10.00 - 18.00</a></li>
+                </ul>
+                <ul class="col-sm-4 col-lg-3">
+                  <li>
+                    <h6>Представительство в России</h6>
+                  </li>
+                  <li><a href="mailto:lorairiscomercial@gmail.com">lorairiscomercial@gmail.com</a></li>
+                  <li><a href="tel:+79204050602">+79204050602</a></li>
+                  <li><a href="tel:+79304085032">+79304085032</a></li>
+                </ul>
+                <ul class="col-sm-4 col-lg-3">
+                  <li>
+                    <h6>Наши контакты</h6>
+                  </li>
+                  <li><a href="tel:+380000000000">+ 380 00 00 00 000</a></li>
+                  <li><a href="tel:+380976309783">+ 380 97 63 09 783</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="footer__bottom">
+          <div class="footer__bottom-left">
+            <div class="footer__copyright">
+              <p>Copyright<span id="year"></span>© LORAIRIS / All rights reserved</p>
+            </div>
+          </div>
+          <div class="footer__bottom-right">
+            <div class="footer__develop"><a href="http://unitspace.top" target="_blank">
+                <p>Разработка и создание сайтов Киев, Харьков</p></a></div>
+            <div class="footer__cards">
+              <ul>
+                <li><a href="#"><img src="images/cards-1.png" alt=""></a></li>
+                <li><a href="#"><img src="images/cards-2.png" alt=""></a></li>
+                <li><a href="#"><img src="images/cards-3.png" alt=""></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+    </div>
+  <script type="text/javascript" src="js/bundle.js"></script></body>
+</html>

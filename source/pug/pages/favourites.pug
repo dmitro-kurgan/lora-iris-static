@@ -1,0 +1,45 @@
+extends ../templates/base
+
+block variables
+	- var classBody = 'favourites-page';
+	- var classWrapper = 'favourites';
+	- var page = '';
+
+block title
+	title Избранное
+
+block header
+	include ../modules/header
+	+header()
+
+block main
+	section.breadcrumb
+		.container
+			.breadcrumb__content
+				.favourites__title
+					h1 Избранное
+				ul.clearfix
+					li
+						a(href='./') Главная
+					li Избранное
+	section.favourites
+		.container
+			.favourites__content
+				ul.favourites__list.row
+					mixin favourItem(newItem, className, img, name, color, price)
+						li(class="col-sm-6 col-md-3 favourites__item wow" + newItem + className)
+							.favourites__img(style="background-image: url(" + require('../../components/images/girl-' + img + '.jpg') + ")")
+							.favourites__name
+								p #{name}
+							.favourites__color
+								p #{color}
+							.favourites__price
+								p #{price}
+									i грн
+							a(href="item.html").btn.btn--buy Купить
+							a(href="#").btn.btn--del Удалить
+					- var newItem = " favourites__item--new";
+					+favourItem(newItem, ' fadeInLeft', '6', 'Тут будет название', 'Белый/30 DD', '207')
+					+favourItem('', ' fadeIn', '3', 'Тут будет название', 'Белый/35 DD', '56')
+					+favourItem('', ' fadeIn', '7', 'Тут будет название', 'Белый/30 DD', '5677')
+					+favourItem('', ' fadeInRight', '8', 'Тут будет название', 'Белый/35 DD', '20')

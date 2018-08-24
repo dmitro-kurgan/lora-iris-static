@@ -1,0 +1,524 @@
+.wrapper {
+	&--account {
+		.breadcrumb {
+			margin-top: 30px;
+			border: 1px solid #f8f6f9;
+			padding: 25px 0;
+			&__content {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				@media #{$mobile} {
+					display: block;
+				}
+			}
+		}
+	}
+}
+//ACCOUNT
+.account {
+	&__title {
+		font-size: 30px;
+		font-weight: 500;
+		font-family: $font2;
+	}
+	&__nav {
+		margin-bottom: 60px;
+		@media #{$mobile} {
+			// padding-left: 15px;
+			margin-bottom: 30px;
+		}
+		li {
+			float: left;
+			@media #{$mobile} {
+				float: none;
+			}
+			& + li {
+				margin-left: 12px;
+				padding-left: 7px;
+				position: relative;
+				@media #{$mobile} {
+					margin-top: 15px;
+					margin-left: 0px;
+					padding-left: 0px;
+				}
+				&:before {
+					content: '';
+					position: absolute;
+					left: 0px;
+					top: 0px;
+					bottom: 0px;
+					margin: auto;
+					height: 29px;
+					width: 1px;
+					background-color: #c3c1c9;
+					@media #{$mobile} {
+						display: none;
+					}
+				}
+			}
+		}
+		a {
+			font-family: $font3;
+			font-weight: 700;
+			font-size: 16px;
+			text-transform: uppercase;
+			&:hover {
+				text-decoration: underline;
+				color: $victoria;
+			}
+			&.active {
+				text-decoration: underline;
+				color: $victoria;
+			}
+		}
+	}
+	&__enter {
+		h2 {
+			&:before {
+				background-image: url(../images/account-enter.svg);
+				width: 15px;
+				height: 16px;
+			}
+		}
+	}
+	&__reg {
+		h2 {
+			&:before {
+				background-image: url(../images/account-reg.svg);
+				width: 18px;
+				height: 18px;
+			}
+		}
+	}
+	&--enter, &--details {
+		form {
+			label {
+				color: #626262;
+				font-family: $font3;
+				font-weight: 400;
+				&.active {
+					color: $victoria;
+				}
+			}
+			button {
+				background-color: $victoria;
+				color: #fff;
+				text-transform: uppercase;
+			}
+		}
+		.form-control {
+			@include addPrefixPlaceholder(placeholder, font-weight, 300);
+			@include addPrefixPlaceholder(placeholder, font-family, $font3);
+			@include addPrefixPlaceholder(placeholder, color, #929292);
+		}
+	}
+	&--details {
+		padding: 50px 0 70px 0;
+		@media #{$mobile} {
+			padding: 30px 15px 40px 15px;
+		}
+		form {
+			button {
+				width: 262px;
+				height: 49px;
+				@media #{$mobile} {
+					display: block;
+					margin: auto;
+				}
+			}
+			label {
+				margin-bottom: 12px;
+			}
+			a {
+				padding-left: 8px;
+				margin-left: 8px;
+				position: relative;
+				color: #626262;
+				&.active {
+					text-decoration: underline;
+					color: $victoria;
+				}
+				&:before {
+					content: '';
+					position: absolute;
+					top: 0px;
+					left: 0px;
+					bottom: 0px;
+					margin: auto;
+					height: 14px;
+					width: 1px;
+					background-color: #c3c1c9;
+				}
+			}
+		}
+		.form-control {
+			background-color: #f5f3f7;
+			height: 37px;
+			border: 1px solid #bababa;
+			box-shadow: none;
+			font-weight: 300;
+			font-family: $font3;
+			color: #999999;
+			&.active {
+				border: 1px solid $victoria;
+			}
+		}
+		.form-group {
+			margin-bottom: 20px;
+		}
+		.alert {
+			color: #929292;
+			font-weight: 300;
+			font-family: $font3;
+			margin-top: 15px;
+			max-width: 570px;
+			&--save, &--not-save {
+				height: 31px;
+				font-family: $font3;
+				font-weight: 400;
+				text-align: center;
+				padding: 8px 0;
+				display: none;
+			}
+			&--save {
+				background-color: #b9e5b6;
+				color: #626262;
+			}
+			&--not-save {
+				background-color: #f37070;
+				color: #fff;
+			}
+		}
+	}
+	&--enter {
+		padding: 40px 0 65px 0;
+		@media #{$mobile} {
+			padding: 40px 0 0px 0;
+		}
+		section {
+			padding: 50px 20px;
+			&:nth-child(odd) {
+				background-color: #f5f3f7;
+			}
+			h2 {
+				font-size: 22px;
+				font-weight: 500;
+				font-family: $font2;
+				padding-left: 32px;
+				position: relative;
+				&:before {
+					content: '';
+					position: absolute;
+					left:0px;
+					top: 0px;
+					bottom: 0px;
+					margin: auto;
+					background-repeta: no-repeat;
+					background-position: center;
+					background-size: contain;
+				}
+			}
+			p {
+				color: #929292;
+				font-weight: 300;
+				font-family: $font3;
+				margin: 8px 0 28px 0;
+			}
+		}
+		form {
+			button {
+				width: 248px;
+				height: 38px;
+				font-size: 11px;
+				@media #{$mobile} {
+					display: block;
+					margin: auto;
+				}
+			}
+			label {
+				margin-bottom: 5px;
+			}
+			a {
+				float: right;
+				color: #626262;
+				font-family: $font3;
+				font-weight: 400;
+				text-decoration: underline;
+				margin-top: 10px;
+				@media #{$mobile} {
+					float: none;
+				}
+			}
+		}
+		.checkbox {
+			display: inline-block;
+			vertical-align: middle;
+			margin: 0px;
+			padding-left: 20px;
+			position: relative;
+			top: 3px;
+			@media #{$mobile} {
+				display: block;
+				text-align: center;
+				margin: 15px 0 0;
+			}
+			&-block {
+				margin: 0px;
+			}
+			label {
+				color: #626262;
+				font-family: $font3;
+				font-weight: 400;
+				padding-left: 0px;
+				margin-bottom: 0px;
+				position: relative;
+				padding-left: 15px;
+			}
+			&-square {
+				position: absolute;
+				left: 0px;
+				width: 11px;
+				height: 11px;
+				display: inline-block;
+				vertical-align: bottom;
+				border: 1px solid #999999;
+				border-radius: 50%;
+				margin-right: 8px;
+				background-color: #fff;
+				&:after {
+					content: '';
+					position: absolute;
+					width: 5px;
+					height: 5px;
+					background-color: #b2b2b2;
+					border-radius: 50%;
+					opacity: 0;
+					top: 0px;
+					left: 0px;
+					right: 0px;
+					bottom: 0px;
+					margin: auto;
+					transition: 0.3s all ease;
+				}
+			}
+			input {
+				position: absolute;
+				z-index: -1;
+				opacity: 0;
+				&:checked + .checkbox-square:after, &:checked + .radio-square:after {
+					opacity: 1;
+				}
+			}
+		}
+		.form-control {
+			background-color: #fff;
+			height: 37px;
+			border: 1px solid #bababa;
+			box-shadow: none;
+			font-weight: 300;
+			font-family: $font3;
+			color: #929292;
+			&.active {
+				border: 1px solid $victoria;
+			}
+		}
+	}
+	&--more {
+		padding: 50px 0px 100px 0px;
+		@media #{$mobile} {
+			padding: 30px 15px 40px 15px;
+		}
+		h2 {
+			font-size: 19px;
+			font-family: $font2;
+			font-weight: 500;
+			margin: 25px 0 18px 0;
+		}
+	}
+	&__order {
+		&-state {
+			padding: 12px;
+			background-color: #d7ecff;
+			border: 1px solid #83afd7;
+			img {
+				display: inline-block;
+				vertical-align: middle;
+			}
+			ul {
+				display: inline-block;
+				vertical-align: middle;
+				margin-left: 20px;
+				@media #{$mobile} {
+					margin-left: 10px;
+				}
+			}
+			li {
+				float: left;
+				@media #{$mobile} {
+					float: none;
+				}
+				& + li {
+					margin-left: 30px;
+					@media #{$mobile} {
+						margin-left: 0px;
+						margin-top: 10px;
+					}
+				}
+			}
+			p {
+				font-family: $font3;
+				font-weight: 400;
+				text-transform: uppercase;
+				span {
+					text-transform: none;
+					color: #424242;
+					font-weight: 300;
+					margin-left: 12px;
+				}
+			}
+		}
+		&-info {
+			table {
+				font-family: $font3;
+				font-weight: 400;
+				& > thead {
+					& > tr {
+						& > th {
+							padding: 10px;
+						}
+					}
+				}
+				& > tbody {
+					& > tr {
+						&:first-child {
+							& > td {
+								color: #989898;
+							}
+						}
+						& > td {
+							padding: 10px;
+						}
+					}
+				}
+			}
+		}
+		&-contacts {
+			li {
+				float: left;
+				@media #{$tablet} {
+					float: none;
+				}
+				& + li {
+					p {
+						padding-left: 20px;
+						margin-left: 20px;
+						position: relative;
+						@media #{$tablet} {
+							margin-top: 20px;
+							padding-left: 0px;
+							margin-left: 0px;
+						}
+						&:before {
+							content: '';
+							position: absolute;
+							top: 0px;
+							bottom: 0px;
+							left: 0px;
+							margin: auto;
+							height: 29px;
+							width: 1px;
+							background-color: #c3c1c9;
+							@media #{$tablet} {
+								display: none;
+							}
+						}
+					}
+				}
+			}
+			p {
+				text-transform: uppercase;
+				display: inline-block;
+				vertical-align: top;
+				@media #{$tablet} {
+					display: block;
+					margin-bottom: 5px;
+				}	
+			}
+			p , a, span {
+				line-height: 22px;
+			}
+			a, span {
+				color: #424242;
+				text-transform: none;
+				margin-left: 8px;
+				max-width: 250px;
+				display: inline-block;
+				vertical-align: top;
+				@media #{$tablet} {
+					margin-left: 0px;
+				}
+			}
+		}
+	}
+	&__list {
+		li {
+			& + li {
+				margin-top: 28px;
+			}
+		}
+	}
+	&__item {
+		background-color: #f5f3f7;
+		.table {
+			margin-bottom: 0px;
+			& > thead {
+				& > tr {
+					& > th {
+						padding: 18px 20px;
+						border-bottom: 1px solid #e1dddf;
+						p {
+							font-family: $font3;
+							font-weight: 400;
+							text-transform: uppercase;
+						}
+					}
+				}
+			}
+			& > tbody {
+				& > tr {
+					& > td {
+						padding: 20px;
+						vertical-align: middle;
+						&:last-child {
+							text-align: right;
+						}
+						p {
+							color: #929292;
+							font-family: $font3;
+							font-weight: 300;
+						}
+					}
+				}
+			}
+		}
+		.btn {
+			width: 156px;
+			height: 51px;
+			border: 1px solid $victoria;
+			padding: 18px 12px;
+			font-size: 11px;
+			text-transform: uppercase;
+			&:hover {
+				background-color: $victoria;
+				color: #fff;
+			}
+		}
+	}
+	&__order-info {
+		
+		table {
+			background-color: #f5f3f7;
+		}
+	}
+}

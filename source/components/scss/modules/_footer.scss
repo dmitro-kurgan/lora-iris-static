@@ -1,0 +1,165 @@
+footer {
+	.footer {
+		&__main {
+			background-color: #f8f6f9;
+			padding: 15px 0 35px 0;
+		}
+		&__left {
+			p {
+				color: #838383;
+				line-height: 24px;
+				margin-top: 30px;
+				margin-bottom: 45px;
+			}
+			ul {
+				display: flex;
+			}
+			li {
+				& + li {
+					margin-left: 20px;
+				}
+			}
+			a {
+				// padding-left: 20px;
+			}
+			i {
+				margin-right: 6px;
+				width: 11px;
+				height: 11px;
+				border-radius: 2px;
+				display: inline-block;
+				// background-color: $victoria;
+			}
+			.fa {
+				
+			}
+		}
+		&__right {
+			h6 {
+				font-family: $font2;
+				font-weight: 500;
+				text-transform: uppercase;
+				min-height: 45px;
+				margin-top: 28px;
+			}
+			li {
+				& + li + li {
+					margin-top: 15px;
+				}
+			}
+			a {
+				color: #838383;
+				font-family: $font3;
+			}
+		}
+		&__socials {
+			i, span {
+				display: inline-block;
+				vertical-align: middle;
+			}
+			i {
+				background-image: url(../images/socials-sprite.png);
+				background-repeat: no-repeat;
+				background-size: cover;
+				width: 11px;
+				height: 11px;
+			}
+			span {
+				font-family: $font3;
+				font-size: 11px;
+				color: $victoria;
+				text-transform: uppercase;
+			}
+			@for $i from 0 to 3 {
+				li {
+					&:nth-child(#{$i + 1}) {
+						i {
+							background-position: 0px + ($i * -13.5px);
+						}
+					}
+				}
+			}
+		}
+		&__bottom {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+			padding: 15px 0;
+			@media #{$mobile} {
+				display: block;
+			}
+			&-right {
+				display: flex;
+				@media #{$mobile} {
+					display: block;
+				}
+			}
+		}
+		&__logo {
+			a {
+				width: 195px;
+				display: flex;
+				align-items: flex-end;
+			}
+			img {
+				&:first-child {
+					width: 43px;
+					margin-right: 10px;
+				}
+				&:last-child {
+					width: 140px;
+				}
+			}
+		}
+		&__copyright {
+			p {
+				@media #{$mobile} {
+					font-size: 13px;
+				}
+			}
+		}
+		&__develop {
+			margin-right: 20px;
+			@media #{$mobile} {
+				margin: 20px 0;
+			}
+			a {
+				color: #838383;
+				display: inline-block;
+				padding-right: 75px;
+				position: relative;
+				&:after {
+					content: '';
+					position: absolute;
+					top: 0px;
+					right: 0px;
+					bottom: 0px;
+					margin: auto;
+					background: url(../images/unit-space.svg)no-repeat center;
+					background-size: contain;
+					width: 59px;
+					height: 24px;
+				}
+			}
+			p {
+				max-width: 160px;
+			}
+		}
+		&__cards {
+			& > ul {
+				display: flex;
+				align-items: center;
+			}
+			li {
+				& + li {
+					margin-left: 3px;
+				}
+			}
+			a {
+				display: block;
+			}
+			// justify-content:
+		}
+	}
+}

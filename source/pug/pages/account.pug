@@ -1,0 +1,64 @@
+extends ../templates/base
+
+block variables
+	- var classBody = 'account-page';
+	- var classWrapper = 'account';
+	- var page = "";
+
+block title
+	title Аккаунт
+
+block header
+	include ../modules/header
+	+header()
+
+block main
+	section.breadcrumb
+		.container
+			.breadcrumb__content
+				.account__title
+					h1 Аккаунт
+				ul.clearfix
+					li
+						a(href='./') Главная
+					li Аккаунт
+	.account.account--details.container
+		.account__nav
+			ul.clearfix
+				li
+					a(href="account.html").active История заказов
+				li
+					a(href="account-details.html") Детали аккаунта
+				li
+					a(href="account-enter.html") Выйти
+		ul.account__list
+			mixin accItem()
+				li.account__item
+					.table-responsive
+						table.table
+							thead
+								tr
+									th
+										p Заказ
+									th
+										p Дата
+									th
+										p Статус
+									th
+										p Всего к оплате
+									th
+							tbody
+								tr
+									td
+										p #3086382
+									td
+										p 24 Апреля, 2018
+									td
+										p В ожидании
+									td
+										p 207 грн / 1 товар
+									td
+										a(href="account-more.html").btn Подробнее
+			+accItem()
+			+accItem()
+			+accItem()

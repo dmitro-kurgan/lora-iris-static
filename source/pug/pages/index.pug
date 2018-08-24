@@ -1,0 +1,211 @@
+extends ../templates/base
+
+block variables
+	- var classBody = 'index-page';
+	- var classWrapper = 'index';
+	- var page = 'index';
+
+block title
+	title Index
+
+block header
+	include ../modules/header
+	+header()
+
+block main
+	.main
+		.main__title.wow.flipInX
+			h1 Welcome to Lora Iris
+			p Равным образом начало повседневной работы
+		section.main__banner#main.wow.fadeIn
+			.container
+				.main__banner-wrapper
+					.controls
+						.controls__current
+						.controls__total
+					.slider.slick-main
+						mixin slickMain()
+							div
+								.row.slick-main__bo
+									.col-sm-4.slick-main__left
+										.slick-main__text
+											span новинка
+											h3 Коллекция
+											p
+												| Значимость этих проблем настолько очевидна, что укрепление и развитие структуры в значительной степени обуславливает создание системы обучения.
+											a(href="category.html") Подробнее
+									.col-sm-8.slick-main__right(style="background-image: url(" + require('../../components/images/banner-1.jpg')+ ")")
+						+slickMain()
+						+slickMain()
+						+slickMain()
+		section.main__we-do.wow.fadeIn
+			.container
+				.main__we-do-title
+					h2 Чем мы занимаемся
+					p
+						| равным образом начало повседневной работы
+				ul.main__we-do-list
+					li.col-sm-4.main__we-do-item
+						a(href="category.html", data-wow-delay="0.25s").main__we-do-box.wow.fadeIn
+							.main__we-do-img(style="background-image: url(" + require('../../components/images/girl-3.jpg')+ ")")
+								.main__we-do-hidden
+									p перейти в категорию "Комплекты"
+						.main__we-do-box.wow.fadeIn(data-wow-delay="0.35s")
+							div.main__we-do-complects
+								img(src=require("../../components/images/icon-1.png"), alt="")
+								p Комплекты
+								span 2075
+									i товаров
+								a(href="category.html") Смотреть подробнее
+					li.col-sm-4.main__we-do-item
+						.main__we-do-box.wow.fadeIn(data-wow-delay="0.45s")
+							div.main__we-do-bra
+								img(src=require("../../components/images/icon-2.png"), alt="")
+								p "Бюстгалтеры"
+								span 689
+									i товаров
+								a(href="category.html") Смотреть подробнее
+						a(href="category.html", data-wow-delay="0.55s").main__we-do-box.wow.fadeIn
+							.main__we-do-img(style="background-image: url(" + require('../../components/images/girl-3.jpg')+ ")")
+								.main__we-do-hidden
+									p перейти в категорию "Бюстгалтеры"
+					li.col-sm-4.main__we-do-item
+						a(href="category.html", data-wow-delay="0.65s").main__we-do-box.wow.fadeIn
+							.main__we-do-img(style="background-image: url(" + require('../../components/images/girl-3.jpg')+ ")")
+								.main__we-do-hidden
+									p перейти в категорию "Трусики"
+						.main__we-do-box.wow.fadeIn(data-wow-delay="0.75s")
+							div.main__we-do-panties
+								img(src=require("../../components/images/icon-3.png"), alt="")
+								p "Трусики"
+								span 10 000
+									i товаров
+								a(href="category.html") Смотреть подробнее
+		section.main__collection#collection.wow.fadeInRight
+			.container
+				.main__collection-block
+					.slider.slick-collection
+						mixin slickCollection(title, text, imgLg, imgSm)
+							div
+								.slick-collection__block.row
+									.slick-collection__left.col-sm-8
+										.slick-collection__lg-img(style="background-image: url(" + require('../../components/images/girl-' + imgLg + '.jpg')+ ")")
+									.slick-collection__right.col-sm-4
+										.slick-collection__info
+											span #{title} 
+											p #{text}
+										.slick-collection__sm-img(style="background-image: url(" + require('../../components/images/boobs-' + imgSm + '.jpg')+ ")")
+						+slickCollection('Тут будет заголовок к комплекту', 'Тут будет описание к комплекту нижнего белья. Значимость этих проблем настолько очевидна, что укрепление и развитие структуры в значительной степени обуславливает создание системы обучения кадров, соответствует насущным потребностям.', '3', '1')
+						+slickCollection('Тут будет заголовок к комплекту', 'Тут будет описание к комплекту нижнего белья. Значимость этих проблем настолько очевидна, что укрепление и развитие структуры в значительной степени обуславливает создание системы обучения кадров, соответствует насущным потребностям.', '3', '1')
+						+slickCollection('Тут будет заголовок к комплекту', 'Тут будет описание к комплекту нижнего белья. Значимость этих проблем настолько очевидна, что укрепление и развитие структуры в значительной степени обуславливает создание системы обучения кадров, соответствует насущным потребностям.', '3', '1')
+					.main__collection-bottom.row
+						.main__collection-bottom-left.col-sm-6
+							.main__collection-info
+								span Lora Iris Collection
+								p
+									| Мы подготоили для вас специальную подборку комплектов нижнего белья, которые обрадуют вас качеством, дизайном и практичностью
+								a(href="category.html") Перейти в магазин
+						.main__collection-bottom-right.col-sm-6
+							span By Lora Iris
+							.controls
+								.controls__current
+								.controls__total
+		section.main__recomend#recomend.wow.fadeIn
+			.container
+				.main__recomend-title
+					h2 Рекомендации
+				.main__recomend-block
+					.slider.slick-recomend
+						mixin slickItem(img, newItem)
+							div
+								div(class="slick-recomend__item" + newItem)
+									.slick-recomend__img(style="background-image: url(" + require('../../components/images/girl-' + img + '.png')+ ")")
+										.slick-recomend__gradient
+											.slick-recomend__info
+												p.slick-recomend__name Тут будет название товара
+												p.slick-recomend__price 60,00
+													i грн
+											.slick-recomend__add-to-cart
+												a(href="item.html").slick-recomend__buy Купить
+												a(href="#").slick-recomend__fav
+						mixin slickRecomend()
+							- var newItem = ' slick-recomend__item--new';
+							- var saleItem = ' slick-recomend__item--sale';
+							+slickItem('1', newItem)
+							+slickItem('2', '')
+							+slickItem('3', '')
+							+slickItem('2', '')
+							+slickItem('1', saleItem)
+							+slickItem('2', '')
+						+slickRecomend()
+						+slickRecomend()
+						+slickRecomend()
+						+slickRecomend()
+						+slickRecomend()
+						+slickRecomend()
+			.main__recomend-panel
+				.container
+					.controls
+						p.controls__prev Назад
+						div
+							.controls__current
+							.controls__total
+						p.controls__next Вперед
+		section.main__info.wow.fadeInLeft
+			.container
+				ul.row
+					li.col-sm-6
+						a(href="blog.html", style="background-image: url(" + require('../../components/images/girl-1.jpg')+ ")")
+							.main__info-inner
+								div
+									h5 Блог от Lorairis
+									p Унайте больше про эту сферу
+					li.col-sm-6
+						a(href="guarantees.html", style="background-image: url(" + require('../../components/images/girl-2.jpg')+ ")")
+							.main__info-inner
+								div
+									h5 Подарочная карта
+									p Унайте больше про эту сферу
+				.main__info-delivery
+					div
+						h4 Бесплатная доставка
+						p
+							| бесплатная доставка при покупке на сумму от 2000 грн
+						a(href="guarantees.html").btn.btn--main подробнее
+		section.main__instagram.wow.fadeIn
+			.container
+				.main__instagram-title
+					h2 Instagram
+				.main__instagram-block
+					ul.row.main__instagram-list
+						mixin instaItem(img, animate)
+							li(class="col-xs-6 col-sm-4 col-md-2 wow" + animate)
+								a.main__instagram-item(href="https://instagram.com", target="_blank", style="background-image: url(" + require('../../components/images/insta-' + img + '.jpg')+ ")")
+									.main__instagram-hidden
+										div
+											ul.clearfix
+												li.main__instagram-fav
+													span 1066
+												li.main__instagram-comments
+													span 80
+											p
+												|Повседневная практика показывает, что дальнейшее развитие различных форм...
+						- var left = " fadeInLeft";
+						- var right = " fadeInRight";
+						+instaItem('0', left)
+						+instaItem('1', left)
+						+instaItem('2', left)
+						+instaItem('3', right)
+						+instaItem('4', right)
+						+instaItem('5', right)
+		section.main__about.wow.fadeInUp
+			.container
+				.main__about-title
+					h2 Про Lora Iris
+					.main__seo-text
+						.scrollbar-inner
+							.main__seo-text-content
+								p
+									| Идейные соображения высшего порядка, а также дальнейшее развитие различных форм деятельности обеспечивает широкому кругу (специалистов) участие в формировании соответствующий условий активизации. Не следует, однако забывать, что укрепление и развитие структуры влечет за собой процесс внедрения и модернизации направлений прогрессивного развития. Не следует, однако забывать, что новая модель организационной деятельности позволяет выполнять важные задания по разработке соответствующий условий активизации.
+								p
+									| Значимость этих проблем настолько очевидна, что новая модель организационной деятельности представляет собой интересный эксперимент проверки дальнейших направлений развития. С другой стороны постоянный количественный рост и сфера нашей активности позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Не следует, однако забывать, что рамки и место обучения кадров представляет собой интересный эксперимент проверки существенных финансовых и административных условий. С другой стороны сложившаяся структура организации обеспечивает широкому кругу (специалистов) участие в формировании соответствующий условий активизации. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий играет важную роль в формировании систем массового участия.

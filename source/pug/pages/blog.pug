@@ -1,0 +1,75 @@
+extends ../templates/base
+
+block variables
+	- var classBody = 'blog-page';
+	- var classWrapper = 'blog';
+	- var page = "blog";
+
+block title
+	title Блог
+
+block header
+	include ../modules/header
+	+header()
+
+block main
+	section.breadcrumb
+		.container
+			ul.clearfix
+				li
+					a(href='./') Главная
+				li Статьи
+	section.blog
+		.blog__title.wow.fadeInDown
+			h1 Наш блог
+		.blog__nav.wow.flipInX
+			.container
+				ul.nav.nav-tabs
+					li.active
+						a(href="#all", data-toggle="tab") Все
+					li
+						a(href="#bestsellers", data-toggle="tab") Бестселлеры
+					li
+						a(href="#usefull", data-toggle="tab") Полезное
+		.blog__content
+			.tab-content
+				#all.tab-pane.fade.in.active
+					mixin blogList()
+						ul.blog__list
+							mixin blogItem(className, img, data, title, text)
+								li(class="blog__item wow" + className)
+									.container
+										.row
+											.blog__item-left.col-sm-6
+												.blog__item-img(style="background-image: url(" + require('../../components/images/insta-' + img + '.jpg')+ ")")
+											.blog__item-right.col-sm-6
+												.blog__item-data
+													span #{data}
+													div
+														p #{data} апреля
+														p 2018
+												.blog__item-title
+													p #{title}
+												.blog__item-text
+													p #{text}
+												a(href="article.html") Подробнее
+							+blogItem(' fadeInLeft', '4', '10', 'Задача организации, в особенности же', 'Разнообразный и богатый опыт консультация с широким активом влечет за собой процесс внедрения и модернизации форм развития. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий')
+							+blogItem(' fadeInRight', '0', '09', 'Задача организации, в особенности же', 'Разнообразный и богатый опыт консультация с широким активом влечет за собой процесс внедрения и модернизации форм развития. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий')
+							+blogItem(' fadeInLeft', '6', '08', 'Задача организации, в особенности же', 'Разнообразный и богатый опыт консультация с широким активом влечет за собой процесс внедрения и модернизации форм развития. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий')
+							+blogItem(' fadeInRight', '7', '07', 'Задача организации, в особенности же', 'Разнообразный и богатый опыт консультация с широким активом влечет за собой процесс внедрения и модернизации форм развития. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий')
+					+blogList()
+				#bestsellers.tab-pane.fade.in
+					+blogList()
+				#usefull.tab-pane.fade.in
+					+blogList()
+		.blog__pagination
+			.container
+				.pagination-block
+					.pagination.loop-pagination
+						a.prev.page-numbers(href='#') Назад
+							i.arrow.left
+						div
+							span.page-numbers.current 01
+							a.page-numbers.total(href='#') /09
+						a.next.page-numbers(href='#') Вперед
+							i.arrow.right

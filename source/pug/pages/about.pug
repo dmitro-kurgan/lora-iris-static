@@ -1,0 +1,102 @@
+extends ../templates/base
+
+block variables
+	- var classBody = 'about-page';
+	- var classWrapper = 'about';
+	- var page = "";
+
+block title
+	title О компании
+
+block header
+	include ../modules/header
+	+header()
+
+block main
+	section.breadcrumb
+		.container
+			.breadcrumb__content
+				.about__title
+					h1 О компании
+				ul.clearfix
+					li
+						a(href='./') Главная
+					li О компании
+	.about
+		section.about__top.wow.fadeInLeft
+			.container
+				.row
+					.col-sm-5.about__top-left
+						h2 Lora Iris
+						p
+							| Lora Iris - украинская торговая марка модного  нижнего белья. Компания занимается оптовой и розничной торговлей на территории Украины и за ее пределами. Дизайном и разработкой моделей нижнего белья занимаются опытные и талантливые дизайнеры. На территории ряда стран Lora Iris уже завоевала симпатию доверие потребитель благодаря высокому качеству изделий и приятным ценам.
+						p
+							| У нас вы можете купить женское белье (комплекты нижнего белья, бюстгальтеры )  оптом, нашей собственной торговой марки Lora Iris ( Лора Ирис ), а так же  другие  известные бренды нижнего белья.
+					.col-sm-7.about__top-right
+						.about__top-img(style="background-image: url(" + require('../../components/images/insta-0.jpg') +")")
+		section.about__comments.wow.fadeInRight
+			.container
+				h2 Что о нас говорят
+				.row
+					.col-sm-7.about__comments-left
+						.slider.slick-comments
+							mixin slickComments(name, data, post)
+								div
+									.slick-comments__item
+										.slick-comments__top
+											.slick-comments__name
+												p #{name}
+											.slick-comments__data
+												p #{data}
+										.slick-comments__post
+											p #{post}
+										.slick-comments__text
+											p
+												| Lora Iris - украинская торговая марка модного  нижнего белья. Компания занимается оптовой и розничной торговлей на территории Украины и за ее пределами. Дизайном и разработкой моделей нижнего белья занимаются опытные и талантливые дизайнеры. На территории ряда стран Lora Iris уже завоевала симпатию доверие потребитель благодаря высокому качеству изделий и приятным ценам.белья. На lorairis.com можно также купить оптом нижнее белье лучших мировых производителей.
+							+slickComments('Тут будет Имя название', '10.04.18', 'Ceo Founder')
+							+slickComments('Тут будет Имя название', '10.04.18', 'Ceo Founder')
+							+slickComments('Тут будет Имя название', '10.04.18', 'Ceo Founder')
+					.col-sm-5.about__comments-right
+						.about__comments-img(style="background-image: url(" + require('../../components/images/girl-6.jpg') +")")
+				.about__pagination
+					.pagination-block
+						.pagination.loop-pagination
+							a.prev.page-numbers(href='#') Назад
+								i.arrow.left
+							div
+								span.page-numbers.current 01
+								a.page-numbers.total(href='#') /09
+							a.next.page-numbers(href='#') Вперед
+								i.arrow.right
+		section.about__buy.wow.fadeInUp
+			.container
+				.about__buy-title
+					h2 У нас вы можете купить женское белье
+					p
+						| Равным образом начало повседневной работы
+				ul.row
+					li.col-sm-6
+						.about__buy-item
+							span
+								| Товар отпускается  оптом — упаковками по 3 шт.
+							p
+								| Lora Iris - украинская торговая марка модного  нижнего белья. Компания занимается оптовой и розничной торговлей на территории Украины и за ее пределами. Дизайном и разработкой моделей нижнего белья занимаются опытные и талантливые дизайнеры. На территории ряда стран Lora Iris.
+					li.col-sm-6
+						.about__buy-item
+							span
+								| Товар отпускается  оптом — упаковками по 3 шт.
+							p
+								| Lora Iris - украинская торговая марка модного  нижнего белья. Компания занимается оптовой и розничной торговлей на территории Украины и за ее пределами. Дизайном и разработкой моделей нижнего белья занимаются опытные и талантливые дизайнеры. На территории ряда стран Lora Iris.
+					li.col-sm-6
+						.about__buy-item
+							span
+								| Товар отпускается  оптом — упаковками по 3 шт.
+							p
+								| Lora Iris - украинская торговая марка модного  нижнего белья. Компания занимается оптовой и розничной торговлей на территории Украины и за ее пределами. Дизайном и разработкой моделей нижнего белья занимаются опытные и талантливые дизайнеры. На территории ряда стран Lora Iris.
+					li.col-sm-6
+						.about__buy-item
+							span
+								| Товар отпускается  оптом — упаковками по 3 шт.
+							p
+								| Lora Iris - украинская торговая марка модного  нижнего белья. Компания занимается оптовой и розничной торговлей на территории Украины и за ее пределами. Дизайном и разработкой моделей нижнего белья занимаются опытные и талантливые дизайнеры. На территории ряда стран Lora Iris.
+				a(href="category.html").btn Перейти в магазин

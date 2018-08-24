@@ -1,0 +1,18 @@
+#enterModal.enterModal.modal.fade(role='dialog')
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close(type='button', data-dismiss='modal')
+        h4.modal-title Войти
+      .modal-body
+        .row
+          .form-group.col-sm-6
+            label(for="name") Имя пользователя или электронная почта*
+            input.form-control(type="text", name="name", id="name", required)
+          .form-group.col-sm-6
+            label(for="password") Пароль*
+            input.form-control(type="text", name="password", id="password", required)
+          .form-group.col-sm-6
+            button.btn(type="submit") Авторизация
+          .form-group.col-sm-6
+            a(href="#").enterModal__forgot-pwd Забыли пароль?

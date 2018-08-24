@@ -1,0 +1,95 @@
+.wrapper {
+	&--favourites {
+		.breadcrumb {
+			margin-top: 30px;
+			border: 1px solid #f8f6f9;
+			padding: 25px 0;
+			&__content {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				@media #{$mobile} {
+					display: block;
+				}
+			}
+		}
+	}
+}
+.favourites {
+	&__title {
+		font-size: 30px;
+		font-weight: 500;
+		font-family: $font2;
+	}
+	&__content {
+		padding-top: 45px;
+		padding-bottom: 110px;
+	}
+	&__item {
+		text-align: center;
+		@media #{$mobile} {
+			& + li {
+				margin-top: 30px;
+			}
+		}
+		&--new {
+			&:after {
+				content: 'НОВИНКА';
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: #fff;
+				position: absolute;
+				top: 12px;
+				right: 25px;
+				background-color: rgba($victoria, 0.8);
+				width: 106px;
+				height: 36px;
+			}
+		}
+		.btn {
+			text-transform: uppercase;
+			padding: 14px 12px;
+			height: 50px;
+			width: 100%;
+			border-radius: 0px;
+			&--buy {
+				background-color: $victoria;
+				color: #fff;
+				border: 1.5px solid transparent;
+				&:hover {
+					background-color: rgba($victoria, 0.8);
+				}
+			}
+			&--del {
+				margin-top: 4px;
+				color: $victoria;
+				border: 1.5px solid transparent;
+				&:hover {
+					border: 1.5px solid $victoria;
+				}
+			}
+		}
+	}
+	&__img {
+		min-height: 420px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+	&__name, &__color {
+		font-size: 18px;
+		font-family: $font2;
+		font-weight: 500;
+		font-style: italic;
+	}
+	&__name {
+		margin: 7px 0 10px 0;
+	}
+	&__price {
+		color: #717171;
+		font-size: 18px;
+		font-weight: 300;
+		margin: 5px 0 10px 0;
+	}
+}

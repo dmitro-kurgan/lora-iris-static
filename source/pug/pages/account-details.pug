@@ -1,0 +1,68 @@
+extends ../templates/base
+
+block variables
+	- var classBody = 'account-page';
+	- var classWrapper = 'account';
+	- var page = "";
+
+block title
+	title Аккаунт
+
+block header
+	include ../modules/header
+	+header()
+
+block main
+	section.breadcrumb
+		.container
+			.breadcrumb__content
+				.account__title
+					h1 Аккаунт
+				ul.clearfix
+					li
+						a(href='./') Главная
+					li Аккаунт
+	.account.account--details.container
+		.account__nav
+			ul.clearfix
+				li
+					a(href="account.html") История заказов
+				li
+					a(href="account-details.html").active Детали аккаунта
+				li
+					a(href="account-enter.html") Выйти
+		form.row
+			.col-sm-6
+				.form-group
+					label(for="name") Имя
+					a(href="#") Изменить
+					input.form-control(type="text", name="name", id="name")
+			.col-sm-6
+				.form-group
+					label(for="lastname") Фамилия
+					input.form-control(type="text", name="lastname", id="lastname")
+			.col-sm-6
+				.form-group
+					label(for="tel") Телефон
+					input.form-control(type="text", name="tel", id="tel")
+			.col-sm-6
+				.form-group
+					label(for="email") Email-адрес
+					input.form-control(type="text", name="email", id="email")
+			.col-sm-12
+				.form-group
+					label(for="old-pwd") Введите старый пароль
+					input.form-control(type="password", name="old-pwd", id="old-pwd")
+			.col-sm-12
+				.form-group
+					label(for="new-pwd") Введите новый пароль
+					input.form-control(type="password", name="new-pwd", id="new-pwd", placeholder="Пароль (не менее 6 символов)")
+					.alert--save Надежный
+					.alert--not-save Ненадежный
+					.alert The password should be at least seven character long. The password should be at least seven character long.
+			.col-sm-12
+				.form-group
+					label(for="rewrite-pwd") Повторите пароль
+					input.form-control(type="password", name="rewrite-pwd", id="rewrite-pwd")
+			.col-sm-12
+				button.btn Сохранить изменения

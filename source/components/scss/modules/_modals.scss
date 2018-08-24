@@ -1,0 +1,81 @@
+.enterModal {
+	&__forgot-pwd {
+		color: #626262;
+		font-family: $font3;
+		text-decoration: underline;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	.close {
+		background: url(../images/close.png)no-repeat center;
+		background-size: contain;
+		width: 15px;
+		height: 15px;
+		opacity: 1;
+		&:focus, &:active {
+			outline: none;
+		}
+	}
+	.modal {
+		&-header {
+		    padding: 15px 10px 20px 30px;
+		    border-bottom: none;
+		}
+		&-title {
+			font-size: 22px;
+			font-family: $font3;
+			color: $victoria;
+		}
+		&-dialog {
+			@media (min-width: 768px) {
+				width: 650px;
+			}
+			@media #{$mobile} {
+				width: 290px;
+			}
+		}
+		&-content {
+			background-color: #edecf1;
+		}
+		&-body {
+			padding: 0px 30px 25px 30px;
+			@media #{$mobile} {
+				padding: 0 20px 15px 20px;
+			}
+		}
+	}
+	.btn {
+		width: 248px;
+		height: 38px;
+		background-color: $victoria;
+		font-size: 11px;
+		color: #fff;
+		text-transform: uppercase;
+	}
+	label {
+		color: #626262;
+		font-family: $font3;
+		font-weight: 400;
+		margin-bottom: 7px;
+		&.active {
+			color: $victoria;
+		}
+	}
+	.form-control {
+		background-color: #fff;
+		height: 37px;
+		border: 1px solid #bababa;
+		box-shadow: none;
+		font-weight: 300;
+		font-family: $font3;
+		color: #999999;
+		@include addPrefixPlaceholder(placeholder, font-weight, 300);
+		@include addPrefixPlaceholder(placeholder, font-family, $font3);
+		@include addPrefixPlaceholder(placeholder, color, #929292);
+		&.active {
+			border: 1px solid $victoria;
+		}
+		
+	}
+}

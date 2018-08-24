@@ -1,0 +1,103 @@
+.wrapper {
+	&--contacts {
+		.breadcrumb {
+			margin-top: 30px;
+			border: 1px solid #f8f6f9;
+			padding: 25px 0;
+			@media #{$mobile} {
+				margin-top: 0px;
+			}
+			&__content {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				@media #{$mobile} {
+					display: block;
+				}
+			}
+		}
+	}
+}
+.contacts {
+	padding-top: 40px;
+	padding-bottom: 75px;
+	@media #{$mobile} {
+		padding-top: 0px;
+	}
+	h2 {
+		font-size: 22px;
+		font-family: $font2;
+		font-weight: 500;
+		& + p {
+			margin-top: 25px;
+		}
+
+	}
+	ul {
+		margin-top: 25px;
+		@media #{$mobile} {
+			margin-bottom: 25px;
+		}
+	}
+	p {
+		a {
+			color: #595858;
+			display: inline-block;
+			margin-left: 5px;
+		}
+	}
+	p {
+		font-weight: 300;
+		line-height: 24px;
+		& + h2 {
+			margin-top: 35px;
+		}
+	}
+	form {
+		margin-top: 10px;
+		label {
+			color: #626262;
+			font-family: $font3;
+			font-weight: 400;
+			margin-bottom: 5px;
+			&.active {
+				color: $victoria;
+			}
+		}
+		textarea {
+			min-height: 146px;
+			resize: none;
+		}
+		button {
+			height: 41px;
+			width: 255px;
+			background-color: $victoria;
+			border-radius: 0px;
+			color: #fff;
+			text-transform: uppercase;
+			@media #{$mobile} {
+				display: block;
+				margin: auto;
+			}
+		}
+	}
+	.form-group {
+		margin-bottom: 8px;
+	}
+	.form-control {
+		background-color: #f5f3f7;
+		height: 37px;
+		border: none;
+		box-shadow: none;
+		font-weight: 300;
+		font-family: $font3;
+		color: #929292;
+		&.active {
+			border: 1px solid $victoria;
+		}
+	}
+}
+.map {
+	margin-top: 50px;
+	min-height: 375px;
+}

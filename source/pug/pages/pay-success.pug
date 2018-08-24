@@ -1,0 +1,54 @@
+extends ../templates/base
+
+block variables
+	- var classBody = 'pay-success-page';
+	- var classWrapper = 'pay-success';
+	- var page = '';
+
+block title
+	title Ваш заказ
+
+block header
+	include ../modules/header
+	+header()
+
+block main
+	section.breadcrumb
+		.container
+			.breadcrumb__content
+				.pay-success__title
+					h1 Ваш заказ
+				ul.clearfix
+					li
+						a(href='./') Главная
+					li Ваш заказ
+	.pay-success
+		section.pay-success__block
+			.pay-success__top
+				img(src=require("../../components/images/ok.svg"), alt="")
+				h2 Спасибо за заказ!
+				p
+					| В ближайшее время с вами свяжется менеджер ля уточнения деталей заказа
+			.pay-success__info
+				ul
+					li
+						p
+							| Заказ:
+						span 508752905
+					li
+						p
+							| Дата:
+						span 24 Апреля, 2018
+					li
+						p
+							| Всего к оплате:
+						span 207
+							i грн
+					li
+						p
+							| Способ оплаты:
+						span Наложенный платеж
+			.container
+				a(href="category.html").btn Продолжить покупку
+
+				

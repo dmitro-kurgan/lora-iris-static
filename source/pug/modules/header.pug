@@ -1,0 +1,89 @@
+//- - var nav = require('../../data/nav.json');
+
+mixin header()
+	header
+		.header
+			.container-fluid
+				.header__content
+					.header__left
+						.header__hamburger#hamburger
+							span.top
+							span.mid
+							span.bottom
+						.header__nav#menu
+							a.header__close-menu(href="#")#menuClose
+							ul
+								li
+									a(class=(page === 'index') ? "active" : "" href="index.html") Главная
+								li
+									a(class=(page === 'news') ? "active" : "" href="category.html") Новинки
+								li
+									a(class=(page === 'complects') ? "active" : "" href="category.html") Комплекты
+								li
+									a(class=(page === 'bras') ? "active" : "" href="category.html") Бюстгалтеры
+								li
+									a(class=(page === 'panties') ? "active" : "" href="category.html") Трусики
+								li
+									a(class=(page === 'blog') ? "active" : "" href="blog.html") Статьи
+								li
+									a(class=(page === 'pay-delivery') ? "active" : "" href="guarantees.html") Доставка и оплата
+					.header__center
+						.header__logo
+							a(href="./")
+								img(src=require('../../components/images/logo-img.svg'), alt="logo")
+								img(src=require('../../components/images/logo-text.svg'), alt="logo")
+					.header__right
+						.header__fav#headerFav
+							a(href="favourites.html")
+								p Избранное
+								i (0)
+						.header__cur#headerCur
+							a(href="#") USD
+							.header__cur-sub-menu
+								ul
+									li
+										a(href="#") USD
+									li
+										a(href="#") UAH
+									li
+										a(href="#") RUB
+						.header__acc#headerAcc
+							a(href="account-enter.html").btn Аккаунт
+						.header__cart#headerCart
+							a(href="#")
+								i (0)
+							.header__cart-box#headerCartBox
+								.header__cart-box-inner
+									ul.header__cart-box-list
+										mixin headerCartItem(name, amount, color, img)
+											li.header__cart-box-item
+												.header__cart-box-left
+													.header__cart-box-del-item
+														a(href="#")
+												.header__cart-box-right
+													.header__cart-box-info
+														.header__cart-box-name
+															p #{name}
+														.header__cart-box-amount
+															p #{amount}
+														.header__cart-box-color
+															p #{color}
+													.header__cart-box-img
+														img(src=require("../../components/images/girl-" + img + ".jpg"), alt="")
+										+headerCartItem('Бюстгальтер 621', '1 x 107 грн', 'Белый / 30 DD', '6')
+									.header__cart-box-manage
+										.header__cart-box-del-cart
+											a(href="#") Очистить корзину
+										.header__cart-box-total
+											p Всего:
+												span 107
+													i грн
+									.header__cart-box-bottom
+										a(href="pay.html").btn.btn--order Оформить заказ
+										a(href="cart.html").btn.btn--add-to-cart В корзину
+						.header__search#headerSearch
+							form
+								input.form-control(type='text')
+								div
+									a(href="#").fa.fa-search
+									button(type="submit").fa.fa-search

@@ -1,0 +1,65 @@
+extends ../templates/base
+
+block variables
+	- var classBody = 'contacts-page';
+	- var classWrapper = 'contacts';
+	- var page = '';
+
+block title
+	title Контакты
+
+block header
+	include ../modules/header
+	+header()
+
+block main
+	section.breadcrumb
+		.container
+			.breadcrumb__content
+				.favourites__title
+					h1 Контакты
+				ul.clearfix
+					li
+						a(href='./') Главная
+					li Наши контакты
+	.contacts.container
+		section.wow.fadeIn
+			ul.row
+				li.col-sm-4
+					h2 О нашей компании
+					p
+						| Lora Iris - украинская торговая марка модного  нижнего белья. Компания занимается оптовой и розничной торговлей на территории Украины и за ее пределами. Дизайном и разработкой моделей нижнего белья занимаются опытные и талантливые дизайнеры. На территории ряда стран Lora Iris уже завоевала симпатию доверие потребитель благодаря высокому качеству изделий и приятным ценам.белья. На lorairis.com можно также купить оптом нижнее белье лучших мировых производителей.
+					h2 Наши контакты
+					ul
+						li
+							p
+								| ул. Сумская 17. Украина. Харьков
+						li
+							p
+								| E-mail:
+								a(href="mailto:lorairis@gmail.com") lorairis@gmail.com
+						li
+							p
+								| Телефон 1:
+								a(href="tel:+380505762220") +38 050 576 22 20;
+						li
+							p
+								| Телефон 2:
+								a(href="tel:+380635242568") +38 063 524 25 68;
+				li.col-sm-8
+					h2 Свяжитесь с нами
+					form
+						.form-group
+							label(for="name") Имя*
+							input.form-control(type="text", name="name", id="name", required)
+						.form-group
+							label(for="email") E-mail*
+							input.form-control(type="text", name="email", id="email", required)
+						.form-group
+							label(for="tel") Телефон
+							input.form-control(type="text", name="tel", id="tel")
+						.form-group
+							label(for="message") Сообщение
+							textarea.form-control(name="message", id="message")
+						button(type="submit").btn Отправить сообщение
+		section.map#map

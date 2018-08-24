@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Оплата</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no">
+  <link href="./css/style.css" rel="stylesheet"></head>
+  <body class="pay-page">
+    <div class="wrapper wrapper--pay">
+            <header>
+              <div class="header">
+                <div class="container-fluid">
+                  <div class="header__content">
+                    <div class="header__left">
+                      <div class="header__hamburger" id="hamburger"><span class="top"></span><span class="mid"></span><span class="bottom"></span></div>
+                      <div class="header__nav" id="menu"><a class="header__close-menu" href="#" id="menuClose"></a>
+                        <ul>
+                          <li><a href="index.html">Главная</a></li>
+                          <li><a href="category.html">Новинки</a></li>
+                          <li><a href="category.html">Комплекты</a></li>
+                          <li><a href="category.html">Бюстгалтеры</a></li>
+                          <li><a href="category.html">Трусики</a></li>
+                          <li><a href="blog.html">Статьи</a></li>
+                          <li><a href="guarantees.html">Доставка и оплата</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="header__center">
+                      <div class="header__logo"><a href="./"><img src="images/logo-img.svg" alt="logo"><img src="images/logo-text.svg" alt="logo"></a></div>
+                    </div>
+                    <div class="header__right">
+                      <div class="header__fav" id="headerFav"><a href="favourites.html">
+                          <p>Избранное</p><i>(0)</i></a></div>
+                      <div class="header__cur" id="headerCur"><a href="#">USD</a>
+                        <div class="header__cur-sub-menu">
+                          <ul>
+                            <li><a href="#">USD</a></li>
+                            <li><a href="#">UAH</a></li>
+                            <li><a href="#">RUB</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="header__acc" id="headerAcc"><a class="btn" href="account-enter.html">Аккаунт</a></div>
+                      <div class="header__cart" id="headerCart"><a href="#"><i>(0)</i></a>
+                        <div class="header__cart-box" id="headerCartBox">
+                          <div class="header__cart-box-inner">
+                            <ul class="header__cart-box-list">
+                                                      <li class="header__cart-box-item">
+                                                        <div class="header__cart-box-left">
+                                                          <div class="header__cart-box-del-item"><a href="#"></a></div>
+                                                        </div>
+                                                        <div class="header__cart-box-right">
+                                                          <div class="header__cart-box-info">
+                                                            <div class="header__cart-box-name">
+                                                              <p>Бюстгальтер 621</p>
+                                                            </div>
+                                                            <div class="header__cart-box-amount">
+                                                              <p>1 x 107 грн</p>
+                                                            </div>
+                                                            <div class="header__cart-box-color">
+                                                              <p>Белый / 30 DD</p>
+                                                            </div>
+                                                          </div>
+                                                          <div class="header__cart-box-img"><img src="images/girl-6.jpg" alt=""></div>
+                                                        </div>
+                                                      </li>
+                            </ul>
+                            <div class="header__cart-box-manage">
+                              <div class="header__cart-box-del-cart"><a href="#">Очистить корзину</a></div>
+                              <div class="header__cart-box-total">
+                                <p>Всего:<span>107<i>грн</i></span></p>
+                              </div>
+                            </div>
+                            <div class="header__cart-box-bottom"><a class="btn btn--order" href="pay.html">Оформить заказ</a><a class="btn btn--add-to-cart" href="cart.html">В корзину</a></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="header__search" id="headerSearch">
+                        <form>
+                          <input class="form-control" type="text">
+                          <div><a class="fa fa-search" href="#"></a>
+                            <button class="fa fa-search" type="submit"></button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </header>
+      <div class="content">
+        <section class="breadcrumb">
+          <div class="container">
+            <div class="breadcrumb__content">
+              <div class="pay__title">
+                <h1>Оплата</h1>
+              </div>
+              <ul class="clearfix">
+                <li><a href="./">Главная</a></li>
+                <li><a href="category.html">Категории</a></li>
+                <li><a href="category.html">Нижнее белье</a></li>
+                <li><a href="category.html">Бюстгальтер 621</a></li>
+                <li><a href="cart.html">Корзина</a></li>
+                <li>Оплата</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <div class="pay">
+          <section class="pay__block">
+            <div class="container">
+              <div class="pay__top"><img src="images/i.png" alt="">
+                <p>Раннее совершали покупку?<a href="#" data-toggle="modal" data-target="#enterModal">Нажмите сюда чтобы ВОЙТИ</a></p>
+              </div>
+              <form class="row">
+                <div class="pay__left col-sm-7">
+                  <h2>Оформление заказа</h2>
+                  <div class="row">
+                    <div class="form-group col-sm-6">
+                      <label for="firstname">Имя*</label>
+                      <input class="form-control" type="text" name="name" id="firstname" required>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label for="lastname">Фамилия*</label>
+                      <input class="form-control" type="text" name="lastname" id="lastname" required>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label for="tel">Телефон*</label>
+                      <input class="form-control" type="text" name="tel" id="tel" required>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label for="email">Email-адрес*</label>
+                      <input class="form-control" type="text" name="email" id="email" required>
+                    </div>
+                    <div class="form-group col-sm-12">
+                      <label for="city">Город*</label>
+                      <input class="form-control" type="text" name="city" id="city" placeholder="Введите город..." required>
+                    </div>
+                    <div class="form-group col-sm-12">
+                      <label for="radio1">Способ доставки*</label>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <div class="checkbox">
+                        <label for="radio1">
+                          <input type="radio" name="radio" id="radio1">
+                          <div class="checkbox-square"></div>Новая почта
+                        </label>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <div class="checkbox">
+                        <label for="radio2">
+                          <input type="radio" name="radio" id="radio2">
+                          <div class="checkbox-square"></div>Самовывоз
+                        </label>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <div class="checkbox">
+                        <label for="radio3">
+                          <input type="radio" name="radio" id="radio3">
+                          <div class="checkbox-square"></div>ИнТайм
+                        </label>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <div class="checkbox">
+                        <label for="radio4">
+                          <input type="radio" name="radio" id="radio4">
+                          <div class="checkbox-square"></div>Пятый вид доставки
+                        </label>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <div class="checkbox">
+                        <label for="radio5">
+                          <input type="radio" name="radio" id="radio5">
+                          <div class="checkbox-square"></div>Курьером по Харькову
+                        </label>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-12">
+                      <label for="flat">Дополнительная информация*</label>
+                    </div>
+                    <div class="form-group col-sm-12">
+                      <input class="form-control" type="text" name="flat" id="flat" placeholder="Квартира, комната, блок и т.д." required>
+                    </div>
+                    <div class="form-group col-sm-12">
+                      <textarea class="form-control" name="addInfo" id="addInfo" placeholder="Примечания к вашему заказу." required></textarea>
+                    </div>
+                    <div class="form-group col-sm-12">
+                      <div class="checkbox">
+                        <label for="checkbox6">
+                          <input type="checkbox" name="checkbox6" id="checkbox6">
+                          <div class="checkbox-square"></div>Созать аккаунт
+                        </label>
+                      </div>
+                      <div class="pay__create-acc">
+                        <p>Создайте учетную запись, заполнив поля ввода ниже. Если вы ранее совершали уже покупку, и являетесь нашим клиентом,пожалуйста, перейдите по ссылке в верхней части страницы.</p>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-12">
+                      <label for="new-pwd">Придумайте пароль*</label>
+                      <input class="form-control" type="password" name="new-pwd" id="new-pwd" placeholder="Пароль (не менее 6 символов)" required>
+                      <div class="alert--save">Надежный</div>
+                      <div class="alert--not-save">Ненадежный</div>
+                      <div class="alert">The password should be at least seven character long. The password should be at least seven character long.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pay__right col-sm-5">
+                  <h2>Ваш заказ</h2>
+                  <div class="pay__info">
+                    <ul>
+                      <li>
+                        <p>Товар</p><span>Всего</span>
+                      </li>
+                      <li>
+                        <p>Бюстгальтер 7629 x 1</p><span>120<i>грн</i></span>
+                      </li>
+                      <li>
+                        <p>Сумма</p><span>207<i>грн</i></span>
+                      </li>
+                      <li>
+                        <p>Всего</p><span>207<i>грн</i></span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="pay__method">
+                    <ul class="clearfix">
+                      <li>
+                        <div class="radio">
+                          <label for="pay-radio1">
+                            <input type="radio" name="radio2" id="pay-radio1">
+                            <div class="radio-square"></div>Наложенный платеж
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="radio">
+                          <label for="pay-radio2">
+                            <input type="radio" name="radio2" id="pay-radio2">
+                            <div class="radio-square"></div>Оплата на карту
+                          </label>
+                          <div class="pay__method-cards">
+                            <ul>
+                              <li><img src="images/cards-1.png" alt=""></li>
+                              <li><img src="images/cards-2.png" alt=""></li>
+                              <li><img src="images/cards-3.png" alt=""></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="pay__method-alert">
+                      <p>Произведите платеж непосредственно на наш банковский счет. Наш менеджер в кратчайшие сроки свяжется с вами для уточнения всех деталей.</p>
+                    </div>
+                    <button class="btn" type="submit">Разместить заказ</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </section>
+<div class="enterModal modal fade" id="enterModal" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" type="button" data-dismiss="modal"></button>
+        <h4 class="modal-title">Войти</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="form-group col-sm-6">
+            <label for="name">Имя пользователя или электронная почта*</label>
+            <input class="form-control" type="text" name="name" id="name" required>
+          </div>
+          <div class="form-group col-sm-6">
+            <label for="password">Пароль*</label>
+            <input class="form-control" type="text" name="password" id="password" required>
+          </div>
+          <div class="form-group col-sm-6">
+            <button class="btn" type="submit">Авторизация</button>
+          </div>
+          <div class="form-group col-sm-6"><a class="enterModal__forgot-pwd" href="#">Забыли пароль?</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+<footer>
+  <div class="footer wow fadeInUp">
+    <div class="footer__content">
+      <div class="footer__main">
+        <div class="container">
+          <div class="row">
+            <div class="footer__left col-sm-4">
+              <div class="footer__logo"><a href="./"><img src="images/logo-img.svg" alt="logo"><img src="images/logo-text.svg" alt="logo"></a></div>
+              <p>Разнообразный и богатый опыт начало повседне работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании форм развития..</p>
+              <ul class="footer__socials">
+                <li><a href="#"><i></i><span>Facebook</span></a></li>
+                <li><a href="#"><i></i><span>Instagram</span></a></li>
+                <li><a href="#"><i></i><span>Vkontakte</span></a></li>
+              </ul>
+            </div>
+            <div class="footer__right col-sm-8">
+              <div class="row">
+                <ul class="col-sm-4 col-lg-3">
+                  <li>
+                    <h6>Lora Iris</h6>
+                  </li>
+                  <li><a href="about.html">О компании</a></li>
+                  <li><a href="guarantees.html">Гарантии</a></li>
+                  <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+                <ul class="col-sm-4 col-lg-3">
+                  <li>
+                    <h6>График работы</h6>
+                  </li>
+                  <li><a href="#">Пн-Сб: 9.00 - 21.00</a></li>
+                  <li><a href="#">Вс: 10.00 - 18.00</a></li>
+                </ul>
+                <ul class="col-sm-4 col-lg-3">
+                  <li>
+                    <h6>Представительство в России</h6>
+                  </li>
+                  <li><a href="mailto:lorairiscomercial@gmail.com">lorairiscomercial@gmail.com</a></li>
+                  <li><a href="tel:+79204050602">+79204050602</a></li>
+                  <li><a href="tel:+79304085032">+79304085032</a></li>
+                </ul>
+                <ul class="col-sm-4 col-lg-3">
+                  <li>
+                    <h6>Наши контакты</h6>
+                  </li>
+                  <li><a href="tel:+380000000000">+ 380 00 00 00 000</a></li>
+                  <li><a href="tel:+380976309783">+ 380 97 63 09 783</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="footer__bottom">
+          <div class="footer__bottom-left">
+            <div class="footer__copyright">
+              <p>Copyright<span id="year"></span>© LORAIRIS / All rights reserved</p>
+            </div>
+          </div>
+          <div class="footer__bottom-right">
+            <div class="footer__develop"><a href="http://unitspace.top" target="_blank">
+                <p>Разработка и создание сайтов Киев, Харьков</p></a></div>
+            <div class="footer__cards">
+              <ul>
+                <li><a href="#"><img src="images/cards-1.png" alt=""></a></li>
+                <li><a href="#"><img src="images/cards-2.png" alt=""></a></li>
+                <li><a href="#"><img src="images/cards-3.png" alt=""></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+    </div>
+  <script type="text/javascript" src="js/bundle.js"></script></body>
+</html>
